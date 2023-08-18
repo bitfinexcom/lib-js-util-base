@@ -1,3 +1,4 @@
+export function cloneDeep (obj: Object): Object
 export function getArrayHasIntersect (arr1: Array<any>, arr2: Array<any>): boolean
 export function getArrayUniq (arr: Array<any>): Array<any>
 export function isNil(val: any): boolean
