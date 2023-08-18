@@ -1,0 +1,7 @@
+# 1.0.0
+- feat: getArrayHasIntersect
+- feat: getArrayUniq
+- feat: isNil util
+- feat: isPlainObject util
+- feat: pick util
+- feat: pickBy util
