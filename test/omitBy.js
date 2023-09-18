@@ -5,7 +5,7 @@
 const assert = require('assert')
 const { omitBy } = require('../index')
 
-describe.only('omitBy', () => {
+describe('omitBy', () => {
   it('should return an empty object when input is null', () => {
     assert.deepStrictEqual(omitBy(null, val => val > 1), {})
   })

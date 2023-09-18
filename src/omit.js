@@ -1,20 +1,19 @@
 'use strict'
 
-const omit = (obj, path) => {
+const omit = (obj, keys) => {
   if (obj === null) {
     return {}
   }
-  
-  const keys = Array.isArray(path) ? path : [path];
-  const result = {};
-  
+
+  const result = {}
+
   for (const key in obj) {
     if (!keys.includes(key)) {
-      result[key] = obj[key];
+      result[key] = obj[key]
     }
   }
 
-  return result;
+  return result
 }
 
 module.exports = omit

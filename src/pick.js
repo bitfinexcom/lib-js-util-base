@@ -1,11 +1,10 @@
 'use strict'
 
-const pick = (obj, path) => {
+const pick = (obj, keys) => {
   if (obj === null) {
     return {}
   }
 
-  const keys = Array.isArray(path) ? path : [path];
   const newObj = {}
   for (const key in obj) {
     if (keys.includes(key)) {

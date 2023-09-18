@@ -29,8 +29,4 @@ describe('pick', () => {
   it('should handle keys that are not strings', () => {
     assert.deepStrictEqual(pick({ 1: 'one', 2: 'two' }, ['1', '2']), { 1: 'one', 2: 'two' })
   })
-  
-  it('should allow single strings as key ', () => {
-    assert.deepStrictEqual(pick({ a: 1, b: 2, c: 3 }, 'a'), { a: 1 })
-  })
 })
