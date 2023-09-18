@@ -7,6 +7,8 @@ const isNil = require('./src/isNil')
 const isPlainObject = require('./src/isPlainObject')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
+const omit = require('./src/omit')
+const omitBy = require('./src/omitBy')
 const camelize = require('./src/camelize')
 
 module.exports = {
@@ -17,5 +19,7 @@ module.exports = {
   isPlainObject,
   pick,
   pickBy,
-  camelize
+  camelize,
+  omit,
+  omitBy
 }
