@@ -10,6 +10,7 @@ const pickBy = require('./src/pickBy')
 const omit = require('./src/omit')
 const omitBy = require('./src/omitBy')
 const camelize = require('./src/camelize')
+const merge = require('./src/merge')
 
 module.exports = {
   cloneDeep,
@@ -21,5 +22,6 @@ module.exports = {
   pickBy,
   camelize,
   omit,
-  omitBy
+  omitBy,
+  merge
 }
