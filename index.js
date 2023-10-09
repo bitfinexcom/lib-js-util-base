@@ -3,6 +3,7 @@
 const cloneDeep = require('./src/cloneDeep')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
+const isEmpty = require('./src/isEmpty')
 const isNil = require('./src/isNil')
 const isPlainObject = require('./src/isPlainObject')
 const pick = require('./src/pick')
@@ -16,6 +17,7 @@ module.exports = {
   cloneDeep,
   getArrayHasIntersect,
   getArrayUniq,
+  isEmpty,
   isNil,
   isPlainObject,
   pick,
