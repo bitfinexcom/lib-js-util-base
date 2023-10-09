@@ -10,6 +10,17 @@ const pathToArray = (path) => {
   return path.split(/\[|\]\.|\]\[|\.|\]/gm).filter((key) => key!== '')
 }
 
+const getDeeperProp = (obj, nextPath, defaults) => {
+  const key = nextPath.shift()
+  if (obj[key] !== undefined) {
+    if (nextPath.length > 0) return getDeeperProp(obj[key], nextPath, defaults)
+
+    return obj[key]
+  }
+
+  return defaults
+}
+
 /**
  * 
  * @param {any} object 
@@ -28,18 +39,8 @@ const get = (object, path, defaults) => {
    * @param {Array<string>} nextPath 
    * @returns {any}
    */
-  const getDeeperProp = (obj, nextPath) => {
-    const key = nextPath.shift()
-    if (obj[key] !== undefined) {
-      if (nextPath.length > 0) return getDeeperProp(obj[key], nextPath)
-  
-      return obj[key]
-    }
 
-    return defaults
-  }
-
-  return getDeeperProp(object, pathToArray(path))
+  return getDeeperProp(object, pathToArray(path), defaults)
 }
 
 module.exports = get
