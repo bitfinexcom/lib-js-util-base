@@ -85,6 +85,20 @@ describe('isEmpty', () => {
     assert.strictEqual(isEmpty(new Foo()), true)
   })
 
+  it('should return true for empty Class', () => {
+    class Foo {}
+
+    assert.strictEqual(isEmpty(new Foo()), true)
+  })
+
+  it('should return false for non-empty Class', () => {
+    class Foo {
+      a = 1
+    }
+
+    assert.strictEqual(isEmpty(new Foo()), false)
+  })
+
   it('should return true for empty prototype objects', () => {
     function Foo () {}
     Foo.prototype = { constructor: Foo }
