@@ -8,3 +8,4 @@ export function pickBy(obj: Object, predicate: (val: any, key: string) => boolea
 export function camelize(str: string): string
 export function omit(obj: Object, keys: Array<string>): Object
 export function omitBy(obj: Object, predicate: (val: any, key: string) => boolean): Object
+export function merge(obj: Object, ...sources: Object): Object
