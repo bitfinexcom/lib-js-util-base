@@ -5,7 +5,7 @@
 const assert = require('assert')
 const { merge } = require('../index')
 
-describe.only('merge', () => {
+describe('merge', () => {
   it('should merge `source` into `object`', function () {
     const names = {
       characters: [

@@ -18,25 +18,28 @@ const _cloneObj = (obj) => {
  * destination object.
  * @param {Object} target The destination target.
  * @param {...Object} [sources] The source objects.
+ * @returns {Object} Returns a clone of `target`.
  */
 function merge (target, ...sources) {
   if (!isPlainObject(target) || !Array.isArray(sources)) return sources
 
   const cloneObj = _cloneObj(target)
 
-  sources.forEach((source) => {
+  for (const i in sources) {
+    const source = sources[i]
     const keys = Object.keys(source)
 
-    keys.forEach((key) => {
+    for (const j in keys) {
+      const key = keys[j]
       const targetValue = cloneObj[key]
       const sourceValue = source[key]
 
       if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
-        cloneObj[key] = targetValue.map((value, i) => {
-          if (sourceValue.length <= i) {
+        cloneObj[key] = targetValue.map((value, k) => {
+          if (sourceValue.length <= k) {
             return value
           } else {
-            return merge(value, sourceValue[i])
+            return merge(value, sourceValue[k])
           }
         })
 
@@ -48,8 +51,8 @@ function merge (target, ...sources) {
       } else {
         cloneObj[key] = sourceValue
       }
-    })
-  })
+    }
+  }
 
   return cloneObj
 }
