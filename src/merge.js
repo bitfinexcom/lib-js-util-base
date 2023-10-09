@@ -25,12 +25,10 @@ function merge (target, ...sources) {
 
   const cloneObj = _cloneObj(target)
 
-  for (const i in sources) {
-    const source = sources[i]
+  for (const source of sources) {
     const keys = Object.keys(source)
 
-    for (const j in keys) {
-      const key = keys[j]
+    for (const key of keys) {
       const targetValue = cloneObj[key]
       const sourceValue = source[key]
 
