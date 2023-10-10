@@ -1,5 +1,6 @@
 'use strict'
 
+const camelize = require('./src/camelize')
 const cloneDeep = require('./src/cloneDeep')
 const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
@@ -7,14 +8,14 @@ const getArrayUniq = require('./src/getArrayUniq')
 const isEmpty = require('./src/isEmpty')
 const isNil = require('./src/isNil')
 const isPlainObject = require('./src/isPlainObject')
-const pick = require('./src/pick')
-const pickBy = require('./src/pickBy')
+const merge = require('./src/merge')
 const omit = require('./src/omit')
 const omitBy = require('./src/omitBy')
-const camelize = require('./src/camelize')
-const merge = require('./src/merge')
+const pick = require('./src/pick')
+const pickBy = require('./src/pickBy')
 
 module.exports = {
+  camelize,
   cloneDeep,
   get,
   getArrayHasIntersect,
@@ -22,10 +23,9 @@ module.exports = {
   isEmpty,
   isNil,
   isPlainObject,
-  pick,
-  pickBy,
-  camelize,
+  merge,
   omit,
   omitBy,
-  merge
+  pick,
+  pickBy
 }
