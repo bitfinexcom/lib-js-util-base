@@ -1,15 +1,21 @@
 'use strict'
 
 /**
- * 
- * @param {string} path 
+ *
+ * @param {string} path
  * @returns {Array<string>}
  */
 const pathToArray = (path) => {
   if (Array.isArray(path)) return path
-  return path.split(/\[|\]\.|\]\[|\.|\]/gm).filter((key) => key!== '')
+  return path.split(/\[|\]\.|\]\[|\.|\]/gm).filter((key) => key !== '')
 }
 
+/**
+ *
+ * @param {any} obj
+ * @param {Array<string>} nextPath
+ * @returns {any}
+ */
 const getDeeperProp = (obj, nextPath, defaults) => {
   const key = nextPath.shift()
   if (obj[key] !== undefined) {
@@ -22,23 +28,20 @@ const getDeeperProp = (obj, nextPath, defaults) => {
 }
 
 /**
- * 
- * @param {any} object 
- * @param {string | Array} path 
- * @param {any} defaults 
+ *
+ * @param {any} object
+ * @param {string | Array} path
+ * @param {any} defaults
  * @returns {any}
  */
 const get = (object, path, defaults) => {
-  if (typeof object !== 'object') return defaults
+  if (typeof object !== 'object' || object === null) {
+    return defaults
+  }
 
-  if (typeof path === 'string' && object[path] !== undefined) return object[path]
-
-  /**
-   * 
-   * @param {any} obj 
-   * @param {Array<string>} nextPath 
-   * @returns {any}
-   */
+  if (typeof path === 'string' && object[path] !== undefined) {
+    return object[path]
+  }
 
   return getDeeperProp(object, pathToArray(path), defaults)
 }
