@@ -3,6 +3,7 @@
 General node js utils library.
 
 Currently supported utils:
+- `get` - get the object members by path
 - `getArrayHasIntersect` - checks if arrays have at least one common value
 - `getArrayUniq` - gets unique values form array
 - `isEmpty` - Checks if value is an empty object, collection, map, or set

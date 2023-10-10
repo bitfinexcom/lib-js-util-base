@@ -1,6 +1,7 @@
 'use strict'
 
 const cloneDeep = require('./src/cloneDeep')
+const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
 const isEmpty = require('./src/isEmpty')
@@ -15,6 +16,7 @@ const merge = require('./src/merge')
 
 module.exports = {
   cloneDeep,
+  get,
   getArrayHasIntersect,
   getArrayUniq,
   isEmpty,
