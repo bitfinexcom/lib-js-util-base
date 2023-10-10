@@ -8,6 +8,7 @@ const _cloneObj = (obj) => {
     return cloneDeep(obj)
   } catch (error) {
     // If the stringify fails due to circular reference, the merge defaults
+    /* istanbul ignore next */
     return Object.assign({}, obj)
   }
 }
@@ -20,8 +21,10 @@ const _cloneObj = (obj) => {
  * @param {...Object} [sources] The source objects.
  * @returns {Object} Returns a clone of `target`.
  */
-function merge (target, ...sources) {
-  if (!isPlainObject(target) || !Array.isArray(sources)) return sources
+const merge = (target, ...sources) => {
+  if (!isPlainObject(target) || !Array.isArray(sources)) {
+    return sources.length === 1 ? sources[0] : sources
+  }
 
   const cloneObj = _cloneObj(target)
 
@@ -33,6 +36,7 @@ function merge (target, ...sources) {
       const sourceValue = source[key]
 
       if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
+        console.debug(targetValue, sourceValue)
         cloneObj[key] = targetValue.map((value, k) => {
           if (sourceValue.length <= k) {
             return value
