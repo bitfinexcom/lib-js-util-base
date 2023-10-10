@@ -1,0 +1,22 @@
+### Description:
+...
+
+### Breaking changes:
+- [ ]
+
+### New features:
+- [ ]
+
+### Fixes:
+- [ ]
+
+### PR status:
+- [ ] Version bumped
+- [ ] Change-log updated
+- [ ] Tests added or updated
+- [ ] PR keeps 100% test coverage
+- [ ] Type definition updated
+- [ ] Readme updated
+- [ ] Linter is applied
+- [ ] Const arrow functions are used instead of pure function definitions where applicable
+- [ ] Functions are listed in alphabetic order in index.js, index.d.ts and readme
