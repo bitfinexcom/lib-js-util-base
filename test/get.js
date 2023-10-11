@@ -5,7 +5,7 @@
 const assert = require('assert')
 const get = require('../src/get')
 
-describe('function get', () => {
+describe('get', () => {
   it('should get property from object', () => {
     const object = { a: 'foo' }
     const res = get(object, 'a')
