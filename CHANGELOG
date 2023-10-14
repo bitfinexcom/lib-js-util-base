@@ -1,3 +1,8 @@
+# 1.2.0
+- feat: get
+- feat: isEmpty
+- feat: merge
+
 # 1.1.0
 - feat: cloneDeep
 
