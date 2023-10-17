@@ -36,7 +36,6 @@ const merge = (target, ...sources) => {
       const sourceValue = source[key]
 
       if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
-        console.debug(targetValue, sourceValue)
         cloneObj[key] = targetValue.map((value, k) => {
           if (sourceValue.length <= k) {
             return value
