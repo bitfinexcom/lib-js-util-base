@@ -29,6 +29,10 @@ const merge = (target, ...sources) => {
   const cloneObj = _cloneObj(target)
 
   for (const source of sources) {
+    if (!isPlainObject(source)) {
+      continue
+    }
+
     const keys = Object.keys(source)
 
     for (const key of keys) {
