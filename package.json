@@ -1,6 +1,6 @@
 {
   "name": "@bitfinex/lib-js-util-base",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "general utils",
   "main": "index.js",
   "scripts": {
