@@ -1,3 +1,6 @@
+# 1.2.1
+- fix: merge should not throw an error with non-plain objects in sources
+
 # 1.2.0
 - feat: get
 - feat: isEmpty

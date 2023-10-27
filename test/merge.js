@@ -129,4 +129,11 @@ describe('merge', () => {
     circularObj.self = circularObj
     assert.deepStrictEqual(merge({}, circularObj), Object.assign({}, circularObj))
   })
+
+  it('should not throw an error with non-plain objects in sources', () => {
+    const expected = { a: 4 }
+    const actual = merge({ a: 1 }, expected, undefined, null, true, '', NaN, /x/, Symbol('a'))
+
+    assert.deepStrictEqual(actual, expected)
+  })
 })
