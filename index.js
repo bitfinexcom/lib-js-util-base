@@ -6,6 +6,7 @@ const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
 const isEmpty = require('./src/isEmpty')
+const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
 const isPlainObject = require('./src/isPlainObject')
 const merge = require('./src/merge')
@@ -21,6 +22,7 @@ module.exports = {
   getArrayHasIntersect,
   getArrayUniq,
   isEmpty,
+  isFunction,
   isNil,
   isPlainObject,
   merge,

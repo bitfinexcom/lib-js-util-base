@@ -9,6 +9,7 @@ Currently supported utils:
 - `getArrayHasIntersect` - checks if arrays have at least one common value
 - `getArrayUniq` - gets unique values form array
 - `isEmpty` - checks if value is an empty object, collection, map, or set
+- `isFunction` - checks if input is a Function object.
 - `isNil` - checks whenever value is null or undefined
 - `isPlainObject` - checks if input is object, not null object and not array object
 - `merge` - deep merge functionality for objects
