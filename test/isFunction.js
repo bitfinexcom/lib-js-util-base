@@ -5,7 +5,7 @@
 const assert = require('assert')
 const { isFunction } = require('../index')
 
-describe('isPlainObject', () => {
+describe('isFunction', () => {
   it('should return true for a Function object', () => {
     assert.strictEqual(isFunction(function () {}), true)
     assert.strictEqual(isFunction(() => {}), true)

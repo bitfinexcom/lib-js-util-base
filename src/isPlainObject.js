@@ -1,7 +1,5 @@
 'use strict'
 
-const isNil = require('./isNil')
-
-const isPlainObject = (val) => !isNil(val) && typeof val === 'object' && !Array.isArray(val)
+const isPlainObject = (val) => val !== null  && typeof val === 'object' && !Array.isArray(val)
 
 module.exports = isPlainObject
