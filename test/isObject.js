@@ -23,9 +23,9 @@ describe('isObject', () => {
 
   it('should return true for result of any constructor', () => {
     assert.ok(isObject(new Set()))
-    assert.ok(isObject(new String()))
+    assert.ok(isObject(new Promise(() => {})))
     assert.ok(isObject(new Map()))
-    assert.ok(isObject(new Array()))
+    assert.ok(isObject(new RegExp()))
   })
 
   it('should return false for null and primitives', () => {
