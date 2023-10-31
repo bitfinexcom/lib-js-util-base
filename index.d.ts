@@ -12,3 +12,4 @@ export function omit(obj: Object, keys: Array<string>): Object
 export function omitBy(obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function pick(obj: Object, keys: Array<string>): Object
 export function pickBy(obj: Object, predicate: (val: any, key: string) => boolean): Object
+export function isObject(verifiable: any): Boolean
