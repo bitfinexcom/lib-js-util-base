@@ -6,10 +6,10 @@ export function getArrayUniq (arr: Array<any>): Array<any>
 export function isEmpty(val: any): boolean
 export function isFunction(val: any): boolean
 export function isNil(val: any): boolean
+export function isObject(verifiable: any): Boolean
 export function isPlainObject(val: any): boolean
 export function merge(obj: Object, ...sources: Object[]): Object
 export function omit(obj: Object, keys: Array<string>): Object
 export function omitBy(obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function pick(obj: Object, keys: Array<string>): Object
 export function pickBy(obj: Object, predicate: (val: any, key: string) => boolean): Object
-export function isObject(verifiable: any): Boolean
