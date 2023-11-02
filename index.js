@@ -8,6 +8,7 @@ const getArrayUniq = require('./src/getArrayUniq')
 const isEmpty = require('./src/isEmpty')
 const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
+const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
 const merge = require('./src/merge')
 const omit = require('./src/omit')
@@ -24,6 +25,7 @@ module.exports = {
   isEmpty,
   isFunction,
   isNil,
+  isObject,
   isPlainObject,
   merge,
   omit,

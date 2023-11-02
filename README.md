@@ -11,6 +11,7 @@ Currently supported utils:
 - `isEmpty` - checks if value is an empty object, collection, map, or set
 - `isFunction` - checks if input is a Function object.
 - `isNil` - checks whenever value is null or undefined
+- `isObject` - checks if the input is not a nullable object instance
 - `isPlainObject` - checks if input is object, not null object and not array object
 - `merge` - deep merge functionality for objects
 - `omit` - provides new object that omits only specific fields of source object

@@ -6,6 +6,7 @@ export function getArrayUniq (arr: Array<any>): Array<any>
 export function isEmpty(val: any): boolean
 export function isFunction(val: any): boolean
 export function isNil(val: any): boolean
+export function isObject(verifiable: any): Boolean
 export function isPlainObject(val: any): boolean
 export function merge(obj: Object, ...sources: Object[]): Object
 export function omit(obj: Object, keys: Array<string>): Object
