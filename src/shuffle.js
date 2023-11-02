@@ -9,11 +9,9 @@
 const shuffle = (array) => {
   const clone = [...array]
   const length = clone.length
-  for (let i = 0; i < length; i++) {
-    const mov = Math.floor(Math.random() * length)
-    const tmp = clone[mov]
-    clone[mov] = clone[i]
-    clone[i] = tmp
+  for (let i = length - 1; i > 0; i--) {
+    const index = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+    [clone[i], clone[index]] = [clone[index], clone[i]] // swap elements
   }
 
   return clone
