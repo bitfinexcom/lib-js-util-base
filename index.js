@@ -15,6 +15,7 @@ const omit = require('./src/omit')
 const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
+const shuffle = require('./src/shuffle')
 
 module.exports = {
   camelize,
@@ -31,5 +32,6 @@ module.exports = {
   omit,
   omitBy,
   pick,
-  pickBy
+  pickBy,
+  shuffle
 }
