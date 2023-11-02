@@ -1,8 +1,8 @@
 'use strict'
 
 const isObject = (verifiable) => {
-  const type = typeof verifiable
   if (verifiable == null) return false
+  const type = typeof verifiable
   return type === 'object' || type === 'function'
 }
 
