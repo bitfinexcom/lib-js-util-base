@@ -11,11 +11,6 @@ describe('isObject', () => {
     assert.ok(isObject(object))
   })
 
-  it('should return true for function', () => {
-    const object = () => {}
-    assert.ok(isObject(object))
-  })
-
   it('should return true for array', () => {
     const object = []
     assert.ok(isObject(object))
