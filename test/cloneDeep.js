@@ -19,4 +19,13 @@ describe('cloneDeep', () => {
     assert.deepStrictEqual(obj, clone)
     assert.notStrictEqual(obj, clone)
   })
+
+  it('should not throw an error when cloning non-objects', () => {
+    const sources = [undefined, Symbol('a'), () => {}]
+
+    for (const obj of sources) {
+      const clone = cloneDeep(obj)
+      assert.deepStrictEqual(obj, clone)
+    }
+  })
 })
