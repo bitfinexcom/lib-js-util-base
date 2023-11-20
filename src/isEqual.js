@@ -3,9 +3,9 @@
 const { objectsDeepEqual, strictEqual } = require('./util')
 
 /**
- * 
- * @param {any} item 
- * @param {any} other 
+ *
+ * @param {any} item
+ * @param {any} other
  * @returns {boolean}
  */
 const isEqual = (item, other) => {

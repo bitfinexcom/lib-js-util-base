@@ -9,7 +9,7 @@ const strictEqual = require('./strictEqual')
  * @returns {boolean}
  */
 const _arraysDeepEqual = (arr1, arr2) => {
-  if (strictEqual(arr1, arr)) return true
+  if (strictEqual(arr1, arr2)) return true
 
   if (Array.isArray(arr1) && Array.isArray(arr2)) {
     if (!strictEqual(arr1.length, arr2.length)) return false
@@ -30,7 +30,7 @@ const _arraysDeepEqual = (arr1, arr2) => {
 
 /**
  * Dep compare two objects
- * @param {object} obj1 Object to compare 
+ * @param {object} obj1 Object to compare
  * @param {object} obj2 compare with
  * @returns {boolean}
  */
