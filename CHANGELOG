@@ -1,6 +1,9 @@
 # 1.6.0
 - feat: isEqual
 
+# 1.5.1
+- fix: cloneDeep should not throw an error when cloning non-objects
+
 # 1.5.0
 - feat: shuffle
 
