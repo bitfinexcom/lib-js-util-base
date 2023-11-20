@@ -3,6 +3,9 @@
 const isObject = require('./isObject')
 
 const cloneDeep = (obj) => {
+  if (obj instanceof Function) {
+    return {}
+  }
   if (!isObject(obj)) {
     return obj
   }

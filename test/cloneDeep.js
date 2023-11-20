@@ -3,7 +3,7 @@
 /* eslint-env mocha */
 
 const assert = require('assert')
-const { cloneDeep } = require('../index')
+const { cloneDeep, isPlainObject } = require('../index')
 
 describe('cloneDeep', () => {
   it('should deep clone objects', () => {
@@ -25,6 +25,13 @@ describe('cloneDeep', () => {
 
     for (const obj of sources) {
       const clone = cloneDeep(obj)
+
+      if (obj instanceof Function) {
+        assert.strictEqual(isPlainObject(clone), true)
+
+        return
+      }
+
       assert.deepStrictEqual(obj, clone)
     }
   })
