@@ -6,6 +6,7 @@ const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
 const isEmpty = require('./src/isEmpty')
+const isEqual = require('./src/isEqual')
 const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
 const isObject = require('./src/isObject')
@@ -16,7 +17,6 @@ const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
 const shuffle = require('./src/shuffle')
-const isEqual = require('./src/isEqual')
 
 module.exports = {
   camelize,
