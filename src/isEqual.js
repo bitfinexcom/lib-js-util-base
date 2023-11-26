@@ -1,6 +1,7 @@
 'use-strict'
 
-const { objectsDeepEqual, strictEqual } = require('./util')
+const objectsDeepEqual = require('./util/objectsDeepEqual')
+const strictEqual = require('./util/strictEqual')
 
 /**
  *
