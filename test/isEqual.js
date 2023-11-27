@@ -73,4 +73,14 @@ describe('isEqual', () => {
 
     assert.ok(isEqual(arr1, arr2))
   })
+
+  it('should compare regexes', () => {
+    assert.ok(isEqual(/asd/gim, /asd/gim))
+    assert.ok(!isEqual(/asd/gi, /asd/g))
+    assert.ok(!isEqual(/asd/, /asf/))
+    assert.strictEqual(
+      isEqual(/x/g, { global: true, ignoreCase: false, multiline: false, source: 'x' }),
+      false
+    )
+  })
 })
