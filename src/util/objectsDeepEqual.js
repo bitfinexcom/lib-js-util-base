@@ -43,6 +43,10 @@ const objectsDeepEqual = (obj1, obj2) => {
     !strictEqual(obj1, null) &&
     !strictEqual(obj2, null)
   ) {
+    if (obj1 instanceof RegExp && obj2 instanceof RegExp) {
+      return String(obj1) === String(obj2)
+    }
+
     if (Array.isArray(obj1) || Array.isArray(obj2)) return _arraysDeepEqual(obj1, obj2)
 
     const keysObj1 = Object.keys(obj1)
