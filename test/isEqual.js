@@ -83,4 +83,19 @@ describe('isEqual', () => {
       false
     )
   })
+
+  it('should return false for comparsion of items with different types', () => {
+    assert.ok(!isEqual(1, '1'))
+    assert.ok(!isEqual(1, { }))
+    assert.ok(!isEqual(false, '5'))
+  })
+
+  it('should return true for nested equal arrays', () => {
+    const nesrtedArray = [1, 2, 3]
+    assert.ok(isEqual({ a: [1, 2, nesrtedArray] }, { a: [1, 2, nesrtedArray] }))
+  })
+
+  it('should return false if nested one of nestd item is not array', () => {
+    assert.ok(!isEqual({ a: [1, 2, [3]] }, { a: [1, 2, 3] }))
+  })
 })
