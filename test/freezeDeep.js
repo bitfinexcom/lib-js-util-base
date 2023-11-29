@@ -35,4 +35,17 @@ describe('freezeDeep', () => {
     const obj = { a: null, b: undefined }
     assert.doesNotThrow(() => freezeDeep(obj))
   })
+
+  it('should deeply freeze an object containing nested arrays', () => {
+    const obj = {
+      a: [1, 2, [3, 4]],
+      b: { c: [5, 6] }
+    }
+
+    freezeDeep(obj)
+
+    assert.throws(() => obj.a.push(5), TypeError)
+    assert.throws(() => obj.a[2].push(7), TypeError)
+    assert.throws(() => obj.b.c.push(8), TypeError)
+  })
 })
