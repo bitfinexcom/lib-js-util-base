@@ -5,6 +5,7 @@ General node js utils library.
 Currently supported utils:
 - `camelize` - simple camel case
 - `cloneDeep` - deep clone functionality for objects
+- `freezeDeep` - deep freezes objects
 - `get` - get the object members by path
 - `getArrayHasIntersect` - checks if arrays have at least one common value
 - `getArrayUniq` - gets unique values form array
