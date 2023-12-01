@@ -2,6 +2,7 @@
 
 const camelize = require('./src/camelize')
 const cloneDeep = require('./src/cloneDeep')
+const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
@@ -21,6 +22,7 @@ const shuffle = require('./src/shuffle')
 module.exports = {
   camelize,
   cloneDeep,
+  freezeDeep,
   get,
   getArrayHasIntersect,
   getArrayUniq,
