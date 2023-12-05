@@ -11,6 +11,7 @@ export function isNil (val: any): boolean
 export function isObject (verifiable: any): Boolean
 export function isPlainObject (val: any): boolean
 export function merge (obj: Object, ...sources: Object[]): Object
+export function min (array: Array<any>): any
 export function omit (obj: Object, keys: Array<string>): Object
 export function omitBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function pick (obj: Object, keys: Array<string>): Object

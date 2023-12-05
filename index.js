@@ -13,6 +13,7 @@ const isNil = require('./src/isNil')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
 const merge = require('./src/merge')
+const min = require('./src/min')
 const omit = require('./src/omit')
 const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
@@ -33,6 +34,7 @@ module.exports = {
   isObject,
   isPlainObject,
   merge,
+  min,
   omit,
   omitBy,
   pick,
