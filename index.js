@@ -12,6 +12,7 @@ const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
+const max = require('./src/max')
 const merge = require('./src/merge')
 const min = require('./src/min')
 const omit = require('./src/omit')
@@ -33,6 +34,7 @@ module.exports = {
   isNil,
   isObject,
   isPlainObject,
+  max,
   merge,
   min,
   omit,

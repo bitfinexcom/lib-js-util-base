@@ -10,6 +10,7 @@ export function isFunction (val: any): boolean
 export function isNil (val: any): boolean
 export function isObject (verifiable: any): Boolean
 export function isPlainObject (val: any): boolean
+export function max (array: Array<any>): any
 export function merge (obj: Object, ...sources: Object[]): Object
 export function min (array: Array<any>): any
 export function omit (obj: Object, keys: Array<string>): Object
