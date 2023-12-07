@@ -1,3 +1,6 @@
+# 1.7.1
+- feat: exrtended pick functionality by using multiple path parameters and nested pick
+
 # 1.7.0
 - feat: freezeDeep
 
