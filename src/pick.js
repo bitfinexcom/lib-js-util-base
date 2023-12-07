@@ -1,57 +1,64 @@
 'use strict'
 
-const merge = require('./merge')
 const get = require('./get')
 const pathToArray = require('./util/pathToArray')
 
 /**
- * 
- * @param {any} root 
- * @param {Array<string>} path 
- * @param {any} value 
- * @returns 
+ *
+ * @param {any} nested
+ * @param {Array<string>} path
+ * @param {any} value
+ * @returns
  */
-const makeObjByPath = (path, value) => {
+const _setObjByPath = (nested, path, value) => {
   if (path.length === 1) {
-    return { [path[0]]: value }
+    return Object.assign(nested, { [path[0]]: value })
   }
 
   const currentProp = path.shift()
+  if (nested[currentProp] === undefined) {
+    nested[currentProp] = {}
+  }
 
-  return { [currentProp]: makeObjByPath(path, value) }
-  
+  return _setObjByPath(nested[currentProp], path, value)
 }
 
 /**
- * 
- * @param {object} src 
- * @param {object} dest 
- * @param {string | Array<string>} path 
- * @returns 
+ *
+ * @param {object} src
+ * @param {object} dest
+ * @param {string | Array<string>} path
+ * @returns
  */
-const pickByPath = (src, dest, path) => {
+const _pickByPath = (src, dest, path) => {
   const pathArr = pathToArray(path)
 
   const value = get(src, [...pathArr])
   if (value !== undefined) {
-    return merge(dest, makeObjByPath(pathArr, value))
+    _setObjByPath(dest, pathArr, value)
   }
   return dest
 }
 
+/**
+ *
+ * @param {any} obj
+ * @param  {...(string | Array<string | Array<strig>>)} pathes
+ * @returns
+ */
 const pick = (obj, ...pathes) => {
   if (obj === null) {
     return {}
   }
 
-  let newObj = {}
+  const newObj = {}
   for (const path of pathes) {
     if (typeof path === 'string') {
-      newObj = pickByPath(obj, newObj, path)
+      _pickByPath(obj, newObj, path)
     }
     if (Array.isArray(path)) {
       for (const chunk of path) {
-        newObj = pickByPath(obj, newObj, chunk)
+        _pickByPath(obj, newObj, chunk)
       }
     }
   }
