@@ -12,7 +12,6 @@ const pathToArray = require('./util/pathToArray')
  * @returns 
  */
 const makeObjByPath = (path, value) => {
-  if (path.length === 0) return {}
   if (path.length === 1) {
     return { [path[0]]: value }
   }
@@ -35,7 +34,7 @@ const pickByPath = (src, dest, path) => {
 
   const value = get(src, [...pathArr])
   if (value !== undefined) {
-    return merge(dest, makeObjByPath(pathArr, value)) || {}
+    return merge(dest, makeObjByPath(pathArr, value))
   }
   return dest
 }
