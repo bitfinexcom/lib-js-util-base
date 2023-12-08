@@ -7,7 +7,7 @@ const min = require('../src/min')
 
 describe('min', () => {
   it('should return the smallest value from a collection', () => {
-    const actual = min([4, 2, 8, 6])
+    const actual = min([4, null, 2, 8, 6])
 
     assert.strictEqual(actual, 2)
   })

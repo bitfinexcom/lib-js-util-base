@@ -7,7 +7,7 @@ const max = require('../src/max')
 
 describe('max', () => {
   it('should return the largest value from a collection', () => {
-    const actual = max([4, 2, 8, 6])
+    const actual = max([4, null, 2, 8, 6])
 
     assert.strictEqual(actual, 8)
   })
