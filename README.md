@@ -15,7 +15,9 @@ Currently supported utils:
 - `isNil` - checks whenever value is null or undefined
 - `isObject` - checks if the input is not a nullable object instance
 - `isPlainObject` - checks if input is object, not null object and not array object
+- `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
 - `merge` - deep merge functionality for objects
+- `min` - computes the minimum value of array. If array is empty or falsey, undefined is returned
 - `omit` - provides new object that omits only specific fields of source object
 - `omitBy` -  provides new object that omits only specific fields of source object depending on predicate function filter
 - `pick` - provides new object that picks only specific fields of source object

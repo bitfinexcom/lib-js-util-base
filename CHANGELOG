@@ -1,5 +1,8 @@
-# 1.7.1
+# 1.8.1
 - feat: exrtended pick functionality by using multiple path parameters and nested pick
+# 1.8.0
+- feat: max
+- feat: min
 
 # 1.7.0
 - feat: freezeDeep
