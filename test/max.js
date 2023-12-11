@@ -27,4 +27,10 @@ describe('max', () => {
       assert.strictEqual(actual, undefined)
     }
   })
+
+  it('should return the largest value from a string collection', () => {
+    const actual = max(['cd', null, 'ab', 'gh', 'ef'])
+
+    assert.strictEqual(actual, 'gh')
+  })
 })

@@ -27,4 +27,10 @@ describe('min', () => {
       assert.strictEqual(actual, undefined)
     }
   })
+
+  it('should return the smallest value from a string collection', () => {
+    const actual = min(['cd', null, 'ab', 'gh', 'ef'])
+
+    assert.strictEqual(actual, 'ab')
+  })
 })
