@@ -1,3 +1,6 @@
+# 1.8.1
+- feat: extended pick functionality by using multiple path parameters and nested pick
+
 # 1.8.0
 - feat: max
 - feat: min
