@@ -1,4 +1,5 @@
 export function camelize (str: string): string
+export function getErrorMessage (obj: obj): string
 export function cloneDeep (obj: Object): Object
 export function freezeDeep (obj: Object): Object
 export function get (obj: Object, path: string | Array<string | number>, defaultValue: any): any

@@ -6,6 +6,7 @@ const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
+const getErrorMessage = require('./src/getErrorMessage')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
 const isFunction = require('./src/isFunction')
@@ -28,6 +29,7 @@ module.exports = {
   get,
   getArrayHasIntersect,
   getArrayUniq,
+  getErrorMessage,
   isEmpty,
   isEqual,
   isFunction,
