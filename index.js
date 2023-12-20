@@ -1,6 +1,7 @@
 'use strict'
 
 const camelize = require('./src/camelize')
+const capitalize = require('./src/capitalize')
 const cloneDeep = require('./src/cloneDeep')
 const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
@@ -24,6 +25,7 @@ const shuffle = require('./src/shuffle')
 
 module.exports = {
   camelize,
+  capitalize,
   cloneDeep,
   freezeDeep,
   get,
