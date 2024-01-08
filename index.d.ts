@@ -19,3 +19,5 @@ export function omitBy (obj: Object, predicate: (val: any, key: string) => boole
 export function pick (obj: Object, keys: Array<string>): Object
 export function pickBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function shuffle<T> (array: Array<T>): Array<T>
+export function snakeCase (str: string): string
+
