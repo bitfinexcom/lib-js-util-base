@@ -4,6 +4,7 @@ General node js utils library.
 
 Currently supported utils:
 - `camelize` - simple camel case
+- `capitalize` - make first char uppercase
 - `cloneDeep` - deep clone functionality for objects
 - `freezeDeep` - deep freezes objects
 - `get` - get the object members by path
