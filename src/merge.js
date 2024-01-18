@@ -1,17 +1,7 @@
 'use strict'
 
 const isPlainObject = require('./isPlainObject')
-const cloneDeep = require('./cloneDeep')
-
-const _cloneObj = (obj) => {
-  try {
-    return cloneDeep(obj)
-  } catch (error) {
-    // If the stringify fails due to circular reference, the merge defaults
-    /* istanbul ignore next */
-    return Object.assign({}, obj)
-  }
-}
+const cloneObj = require('./util/cloneObj')
 
 /**
  * This method is like `assign` except that it recursively merges own and
@@ -26,7 +16,7 @@ const merge = (target, ...sources) => {
     return sources.length === 1 ? sources[0] : sources
   }
 
-  const cloneObj = _cloneObj(target)
+  const clone = cloneObj(target)
 
   for (const source of sources) {
     if (!isPlainObject(source)) {
@@ -36,11 +26,11 @@ const merge = (target, ...sources) => {
     const keys = Object.keys(source)
 
     for (const key of keys) {
-      const targetValue = cloneObj[key]
+      const targetValue = clone[key]
       const sourceValue = source[key]
 
       if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
-        cloneObj[key] = targetValue.map((value, k) => {
+        clone[key] = targetValue.map((value, k) => {
           if (sourceValue.length <= k) {
             return value
           } else {
@@ -49,17 +39,17 @@ const merge = (target, ...sources) => {
         })
 
         if (sourceValue.length > targetValue.length) {
-          cloneObj[key] = cloneObj[key].concat(sourceValue.slice(targetValue.length))
+          clone[key] = clone[key].concat(sourceValue.slice(targetValue.length))
         }
       } else if (isPlainObject(targetValue) && isPlainObject(sourceValue)) {
-        cloneObj[key] = merge(_cloneObj(targetValue), sourceValue)
+        clone[key] = merge(cloneObj(targetValue), sourceValue)
       } else {
-        cloneObj[key] = sourceValue
+        clone[key] = sourceValue
       }
     }
   }
 
-  return cloneObj
+  return clone
 }
 
 module.exports = merge
