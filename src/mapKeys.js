@@ -15,7 +15,7 @@ const mapKeys = (obj, mapper) => {
   if (!isObject(obj)) {
     return obj
   }
-  
+
   const clone = cloneObj(obj)
 
   return Object.entries(clone).reduce((acc, [key, value]) => ({
