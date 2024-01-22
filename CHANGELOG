@@ -1,5 +1,11 @@
-# 1.9.0
+# 1.11.0
 - feat: snakeCase
+
+# 1.10.0
+- feat: mapKeys
+
+# 1.9.0
+- feat: capitalize
 
 # 1.8.1
 - feat: extended pick functionality by using multiple path parameters and nested pick

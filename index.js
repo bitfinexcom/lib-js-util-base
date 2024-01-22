@@ -1,6 +1,7 @@
 'use strict'
 
 const camelize = require('./src/camelize')
+const capitalize = require('./src/capitalize')
 const cloneDeep = require('./src/cloneDeep')
 const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
@@ -13,6 +14,7 @@ const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
+const mapKeys = require('./src/mapKeys')
 const max = require('./src/max')
 const merge = require('./src/merge')
 const min = require('./src/min')
@@ -25,6 +27,7 @@ const snakeCase = require('./src/snakeCase')
 
 module.exports = {
   camelize,
+  capitalize,
   cloneDeep,
   freezeDeep,
   get,
@@ -37,6 +40,7 @@ module.exports = {
   isNil,
   isObject,
   isPlainObject,
+  mapKeys,
   max,
   merge,
   min,

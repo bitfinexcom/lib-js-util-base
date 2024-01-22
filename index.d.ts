@@ -1,4 +1,5 @@
 export function camelize (str: string): string
+export function capitalize (str: string): string
 export function getErrorMessage (obj: obj): string
 export function cloneDeep (obj: Object): Object
 export function freezeDeep (obj: Object): Object
@@ -11,6 +12,7 @@ export function isFunction (val: any): boolean
 export function isNil (val: any): boolean
 export function isObject (verifiable: any): Boolean
 export function isPlainObject (val: any): boolean
+export function mapKeys(obj: Object, mapper: (val: any, key: string) => string): Object
 export function max (array: Array<any>): any
 export function merge (obj: Object, ...sources: Object[]): Object
 export function min (array: Array<any>): any

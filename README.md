@@ -4,6 +4,7 @@ General node js utils library.
 
 Currently supported utils:
 - `camelize` - simple camel case
+- `capitalize` - make first char uppercase
 - `cloneDeep` - deep clone functionality for objects
 - `freezeDeep` - deep freezes objects
 - `get` - get the object members by path
@@ -15,6 +16,7 @@ Currently supported utils:
 - `isNil` - checks whenever value is null or undefined
 - `isObject` - checks if the input is not a nullable object instance
 - `isPlainObject` - checks if input is object, not null object and not array object
+- `mapKeys` - creates new object with the same values but with keys mapped by the provided function
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
 - `merge` - deep merge functionality for objects
 - `min` - computes the minimum value of array. If array is empty or falsey, undefined is returned
