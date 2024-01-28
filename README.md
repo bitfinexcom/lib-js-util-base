@@ -16,6 +16,7 @@ Currently supported utils:
 - `isNil` - checks whenever value is null or undefined
 - `isObject` - checks if the input is not a nullable object instance
 - `isPlainObject` - checks if input is object, not null object and not array object
+- `last` - get the last value of array. If array is empty or falsey, undefined is returned
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
 - `merge` - deep merge functionality for objects

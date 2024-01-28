@@ -14,6 +14,7 @@ const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
+const last = require('./src/last')
 const mapKeys = require('./src/mapKeys')
 const max = require('./src/max')
 const merge = require('./src/merge')
@@ -39,6 +40,7 @@ module.exports = {
   isNil,
   isObject,
   isPlainObject,
+  last,
   mapKeys,
   max,
   merge,
