@@ -7,6 +7,7 @@ export function get (obj: Object, path: string | Array<string | number>, default
 export function getArrayHasIntersect (arr1: Array<any>, arr2: Array<any>): boolean
 export function getArrayUniq (arr: Array<any>): Array<any>
 export function head (array: Array<any>): any
+export function isArray (val: any): boolean
 export function isEmpty (val: any): boolean
 export function isEqual (value: any, another: any): boolean
 export function isFunction (val: any): boolean

@@ -1,5 +1,7 @@
 #1.11.0
 - feat: head
+- feat: last
+- feat: isArray
 
 #1.10.0
 - feat: mapKeys
