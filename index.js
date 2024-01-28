@@ -8,12 +8,15 @@ const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
 const getErrorMessage = require('./src/getErrorMessage')
+const head = require('./src/head')
+const isArray = require('./src/isArray')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
 const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
+const last = require('./src/last')
 const mapKeys = require('./src/mapKeys')
 const max = require('./src/max')
 const merge = require('./src/merge')
@@ -33,12 +36,15 @@ module.exports = {
   getArrayHasIntersect,
   getArrayUniq,
   getErrorMessage,
+  head,
+  isArray,
   isEmpty,
   isEqual,
   isFunction,
   isNil,
   isObject,
   isPlainObject,
+  last,
   mapKeys,
   max,
   merge,
