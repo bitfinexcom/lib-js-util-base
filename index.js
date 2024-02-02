@@ -15,6 +15,7 @@ const isNil = require('./src/isNil')
 const isNumber = require('./src/isNumber')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
+const isString = require('./src/isString')
 const mapKeys = require('./src/mapKeys')
 const max = require('./src/max')
 const merge = require('./src/merge')
@@ -41,6 +42,7 @@ module.exports = {
   isNumber,
   isObject,
   isPlainObject,
+  isString,
   mapKeys,
   max,
   merge,

@@ -7,23 +7,23 @@ const { isNumber } = require('../index')
 
 describe('isNumber', () => {
   it('should return true for a positive number', () => {
-    assert.ok(isNumber(42));
-  });
+    assert.ok(isNumber(42))
+  })
 
   it('should return true for a negative number', () => {
-    assert.ok(isNumber(-5));
-  });
+    assert.ok(isNumber(-5))
+  })
 
   it('should return true for zero', () => {
-    assert.ok(isNumber(0));
-  });
+    assert.ok(isNumber(0))
+  })
 
   it('should return false for any other primitive', () => {
-    assert.ok(!isNumber('hello'));
-    assert.ok(!isNumber([1, 2, 3]));
-    assert.ok(!isNumber({ key: 'value' }));
-    assert.ok(!isNumber(true));
-    assert.ok(!isNumber(null));
-    assert.ok(!isNumber(undefined));
-  });
+    assert.ok(!isNumber('hello'))
+    assert.ok(!isNumber([1, 2, 3]))
+    assert.ok(!isNumber({ key: 'value' }))
+    assert.ok(!isNumber(true))
+    assert.ok(!isNumber(null))
+    assert.ok(!isNumber(undefined))
+  })
 })
