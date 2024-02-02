@@ -14,6 +14,7 @@ Currently supported utils:
 - `isEqual` - check if passed two values are equal
 - `isFunction` - checks if input is a Function object.
 - `isNil` - checks whenever value is null or undefined
+- `isNumber` - checks if input is a number.
 - `isObject` - checks if the input is not a nullable object instance
 - `isPlainObject` - checks if input is object, not null object and not array object
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function

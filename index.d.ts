@@ -10,6 +10,7 @@ export function isEmpty (val: any): boolean
 export function isEqual (value: any, another: any): boolean
 export function isFunction (val: any): boolean
 export function isNil (val: any): boolean
+export function isNumber (val: any): boolean
 export function isObject (verifiable: any): Boolean
 export function isPlainObject (val: any): boolean
 export function mapKeys(obj: Object, mapper: (val: any, key: string) => string): Object
