@@ -43,7 +43,7 @@ const _pickByPath = (src, dest, path) => {
 /**
  *
  * @param {any} obj
- * @param  {...(string | Array<string | Array<strig>>)} pathes
+ * @param  {...(string | Array<string | Array<string>>)} pathes
  * @returns
  */
 const pick = (obj, ...pathes) => {
