@@ -10,6 +10,7 @@ const getArrayUniq = require('./src/getArrayUniq')
 const getErrorMessage = require('./src/getErrorMessage')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
+const isFinite = require('./src/isFinite')
 const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
 const isNumber = require('./src/isNumber')
@@ -37,6 +38,7 @@ module.exports = {
   getErrorMessage,
   isEmpty,
   isEqual,
+  isFinite,
   isFunction,
   isNil,
   isNumber,

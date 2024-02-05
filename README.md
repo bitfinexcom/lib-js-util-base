@@ -12,6 +12,7 @@ Currently supported utils:
 - `getArrayUniq` - gets unique values form array
 - `isEmpty` - checks if value is an empty object, collection, map, or set
 - `isEqual` - check if passed two values are equal
+- `isFinite` - checks if input is a finite number.
 - `isFunction` - checks if input is a Function object.
 - `isNil` - checks whenever value is null or undefined
 - `isNumber` - checks if input is a number.

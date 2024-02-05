@@ -1,6 +1,7 @@
 'use strict'
 
 /* eslint-env mocha */
+/* eslint-disable no-new-wrappers */
 
 const assert = require('assert')
 const { isString } = require('../index')
