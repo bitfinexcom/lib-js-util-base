@@ -1,5 +1,5 @@
 'use strict'
 
-const isString = (val) => typeof val === 'string'
+const isString = (val) => typeof val === 'string' || val instanceof String
 
 module.exports = isString

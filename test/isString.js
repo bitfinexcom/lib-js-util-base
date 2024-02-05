@@ -10,6 +10,10 @@ describe('isString', () => {
     assert.ok(isString('text'))
   })
 
+  it('should return true for a constructed string ', () => {
+    assert.ok(isString(new String('text')))
+  })
+
   it('should return true for an empty string', () => {
     assert.ok(isString(''))
   })
