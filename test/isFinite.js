@@ -19,15 +19,24 @@ describe('isFinite', () => {
     assert.ok(isFinite(0))
   })
 
-  it('should return true for a constructed number ', () => {
-    assert.ok(isFinite(new Number(54)))
+  it('should return true for bigNumbers', () => {
+    assert.ok(isFinite(Number.MAX_SAFE_INTEGER))
+    assert.ok(isFinite(Number.MAX_SAFE_INTEGER + 1))
+    assert.ok(isFinite(Number.MIN_SAFE_INTEGER))
+    assert.ok(isFinite(Number.MIN_SAFE_INTEGER - 1))
   })
 
-  it('should return true for NaN', () => {
+  it('should return FALSE for a constructed number ', () => {
+    assert.ok(!isFinite(new Number(54)))
+  })
+
+  it('should return FALSE for NaN and infinity', () => {
     assert.ok(!isFinite(NaN))
+    assert.ok(!isFinite(Number.NEGATIVE_INFINITY))
+    assert.ok(!isFinite(Number.POSITIVE_INFINITY))
   })
 
-  it('should return false for any other primitive', () => {
+  it('should return FALSE for any other primitive', () => {
     assert.ok(!isFinite('hello'))
     assert.ok(!isFinite([1, 2, 3]))
     assert.ok(!isFinite({ key: 'value' }))

@@ -1,6 +1,7 @@
 'use strict'
+const isNumber = require('./isNumber')
 
-const isFinite = (val) => (typeof val === 'number' && Number.isFinite(val)) ||
-  (val instanceof Number && Number.isFinite(val.valueOf()))
+// disclaimer: not valid for new Number(<FiniteNumber>)
+const isFinite = (val) => isNumber(val) && Number.isFinite(val)
 
 module.exports = isFinite
