@@ -7,19 +7,19 @@ const assert = require('assert')
 const { isString } = require('../index')
 
 describe('isString', () => {
-  it('should return true for a string', () => {
+  it('should return TRUE for a string', () => {
     assert.ok(isString('text'))
   })
 
-  it('should return true for a constructed string ', () => {
-    assert.ok(isString(new String('text')))
-  })
-
-  it('should return true for an empty string', () => {
+  it('should return TRUE for an empty string', () => {
     assert.ok(isString(''))
   })
 
-  it('should return false for any other primitive', () => {
+  it('should return FALSE for a constructed string ', () => {
+    assert.ok(!isString(new String('text')))
+  })
+
+  it('should return FALSE for any other primitive', () => {
     assert.ok(!isString(45))
     assert.ok(!isString([1, 2, 3]))
     assert.ok(!isString(['1', '2', '3']))
