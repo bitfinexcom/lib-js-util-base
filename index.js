@@ -10,10 +10,13 @@ const getArrayUniq = require('./src/getArrayUniq')
 const getErrorMessage = require('./src/getErrorMessage')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
+const isFinite = require('./src/isFinite')
 const isFunction = require('./src/isFunction')
 const isNil = require('./src/isNil')
+const isNumber = require('./src/isNumber')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
+const isString = require('./src/isString')
 const mapKeys = require('./src/mapKeys')
 const max = require('./src/max')
 const merge = require('./src/merge')
@@ -35,10 +38,13 @@ module.exports = {
   getErrorMessage,
   isEmpty,
   isEqual,
+  isFinite,
   isFunction,
   isNil,
+  isNumber,
   isObject,
   isPlainObject,
+  isString,
   mapKeys,
   max,
   merge,

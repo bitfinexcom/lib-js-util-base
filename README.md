@@ -12,10 +12,13 @@ Currently supported utils:
 - `getArrayUniq` - gets unique values form array
 - `isEmpty` - checks if value is an empty object, collection, map, or set
 - `isEqual` - check if passed two values are equal
+- `isFinite` - checks if input is a finite number.
 - `isFunction` - checks if input is a Function object.
 - `isNil` - checks whenever value is null or undefined
+- `isNumber` - checks if input is a number.
 - `isObject` - checks if the input is not a nullable object instance
 - `isPlainObject` - checks if input is object, not null object and not array object
+- `isString` - checks if input is a string
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
 - `merge` - deep merge functionality for objects

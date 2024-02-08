@@ -1,3 +1,8 @@
+#1.11.0
+- feat: isNumber
+- feat: isFinite
+- feat: isString
+
 #1.10.0
 - feat: mapKeys
 
