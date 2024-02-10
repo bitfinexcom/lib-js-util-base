@@ -1,7 +1,8 @@
 export function camelize (str: string): string
 export function capitalize (str: string): string
-export function getErrorMessage (obj: obj): string
+export function getErrorMessage (obj: Object): string
 export function cloneDeep (obj: Object): Object
+export function filter (obj: Object, predicate: any): Array<any>
 export function freezeDeep (obj: Object): Object
 export function get (obj: Object, path: string | Array<string | number>, defaultValue: any): any
 export function getArrayHasIntersect (arr1: Array<any>, arr2: Array<any>): boolean

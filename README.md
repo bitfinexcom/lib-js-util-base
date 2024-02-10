@@ -6,6 +6,7 @@ Currently supported utils:
 - `camelize` - simple camel case
 - `capitalize` - make first char uppercase
 - `cloneDeep` - deep clone functionality for objects
+- `filter` - filter objects
 - `freezeDeep` - deep freezes objects
 - `get` - get the object members by path
 - `getArrayHasIntersect` - checks if arrays have at least one common value
