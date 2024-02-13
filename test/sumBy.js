@@ -1,9 +1,11 @@
 'use strict'
 
+/* eslint-env mocha */
+
 const assert = require('assert')
 const { sumBy } = require('../index')
 
-describe('sum', () => {
+describe('sumBy', () => {
   it('should return a sum by iteratee function', () => {
     assert.strictEqual(sumBy([{ foo: 1 }, { foo: 2 }, { foo: 3 }], (i) => i.foo), 6)
   })

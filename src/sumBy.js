@@ -4,9 +4,8 @@ const get = require('./get')
 const sumByIterateeFunc = require('./util/sumByIterateeFunc')
 
 /**
- * 
- * @param { Array } values 
- * @param { Function | string } iteratee 
+ * @param { Array } values
+ * @param { Function | string } iteratee
  * @returns { number }
  */
 const sumBy = (values, iteratee) => {
@@ -14,11 +13,11 @@ const sumBy = (values, iteratee) => {
     return 0
   }
 
-  if(typeof iteratee === 'function') {
+  if (typeof iteratee === 'function') {
     return sumByIterateeFunc(values, iteratee)
   }
 
-  if(typeof iteratee === 'string') {
+  if (typeof iteratee === 'string') {
     return sumByIterateeFunc(values, (value) => get(value, iteratee, 0))
   }
 

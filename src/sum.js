@@ -3,8 +3,7 @@
 const sumByIterateeFunc = require('./util/sumByIterateeFunc')
 
 /**
- * 
- * @param {Array<number>} values 
+ * @param {Array<number>} values
  * @returns { number }
  */
 const sum = (values) => {
