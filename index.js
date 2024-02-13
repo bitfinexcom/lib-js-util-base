@@ -26,6 +26,8 @@ const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
 const shuffle = require('./src/shuffle')
+const sum = require('./src/sum')
+const sumBy = require('./src/sumBy')
 
 module.exports = {
   camelize,
@@ -53,5 +55,7 @@ module.exports = {
   omitBy,
   pick,
   pickBy,
-  shuffle
+  shuffle,
+  sum,
+  sumBy
 }
