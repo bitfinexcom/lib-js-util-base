@@ -1,3 +1,7 @@
+#1.12.0
+- feat: sum
+- feat: sumBy
+
 #1.11.0
 - feat: isNumber
 - feat: isFinite
