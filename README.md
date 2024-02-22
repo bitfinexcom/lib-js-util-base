@@ -28,3 +28,5 @@ Currently supported utils:
 - `pick` - provides new object that picks only specific fields of source object
 - `pickBy` -  provides new object that picks only specific fields of source object depending on predicate function filter
 - `shuffle` - performs pseudo random shuffle on clone of the array
+- `sum` - calculate sum of array items
+- `sumBy` - calculate sum of array items using iteratee function or string shortcut
