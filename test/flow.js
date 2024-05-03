@@ -17,7 +17,7 @@ describe('flow', () => {
     const subtractFive = (num) => num - 5
 
     const result = flow([addOne, double, subtractFive])(10)
-    assert.strictEqual(result, 11)
+    assert.strictEqual(result, 17)
   })
 
   it('should throw an error if any element in the array is not a function', () => {
