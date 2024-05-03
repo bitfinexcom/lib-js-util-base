@@ -3,6 +3,7 @@
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
 const cloneDeep = require('./src/cloneDeep')
+const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
@@ -45,6 +46,7 @@ module.exports = {
   isObject,
   isPlainObject,
   isString,
+  flow,
   mapKeys,
   max,
   merge,
