@@ -21,6 +21,7 @@ Currently supported utils:
 - `isPlainObject` - checks if input is object, not null object and not array object
 - `isString` - checks if input is a string
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function
+- `mapValues` - Maps the values of an object or array using the provided iteratee function or property path
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
 - `merge` - deep merge functionality for objects
 - `min` - computes the minimum value of array. If array is empty or falsey, undefined is returned

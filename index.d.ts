@@ -17,6 +17,7 @@ export function isObject (verifiable: any): Boolean
 export function isPlainObject (val: any): boolean
 export function isString (val: any): boolean
 export function mapKeys(obj: Object, mapper: (val: any, key: string) => string): Object
+export function mapValues(obj: Object, mapper: (val: any, key: string) => any): Object
 export function max (array: Array<any>): any
 export function merge (obj: Object, ...sources: Object[]): Object
 export function min (array: Array<any>): any
