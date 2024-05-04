@@ -51,6 +51,7 @@ module.exports = {
   isString,
   flow,
   mapKeys,
+  mapValues,
   max,
   merge,
   min,
