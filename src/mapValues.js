@@ -4,7 +4,7 @@ const get = require('./get')
 
 /**
  * Maps the values of an object or array using the provided iteratee function or property path.
- * 
+ *
  * @param {object|Array} src - The source object or array to map.
  * @param {Function|string} iteratee - The iteratee function or property path to map the values.
  * @returns {object} - The new object with mapped values.
