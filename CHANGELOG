@@ -1,9 +1,8 @@
-#1.14.0
-- feat: mapValues
-- feat: invert
-
 #1.13.0
 - feat: flow
+- feat: invert
+- feat: mapValues
+- feat: uniqBy
 
 #1.12.0
 - feat: sum
