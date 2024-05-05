@@ -1,3 +1,7 @@
+#1.14.0
+- feat: mapValues
+- feat: invert
+
 #1.13.0
 - feat: flow
 
