@@ -18,13 +18,13 @@ describe('uniqBy', () => {
       { id: 1, name: 'John' },
       { id: 2, name: 'Jane' },
       { id: 3, name: 'John' },
-      { id: 4, name: 'Jane' },
+      { id: 4, name: 'Jane' }
     ]
     const iteratee = 'name'
     const result = uniqBy(arr, iteratee)
     assert.deepStrictEqual(result, [
       { id: 1, name: 'John' },
-      { id: 2, name: 'Jane' },
+      { id: 2, name: 'Jane' }
     ])
   })
 

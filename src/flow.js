@@ -2,7 +2,7 @@
 
 /**
  * Executes a series of functions in a pipeline, passing the result of each function as the argument to the next function.
- * 
+ *
  * @param {Array<Function>} fns - An array of functions to be executed in order.
  * @returns {any} - The final result of the pipeline.
  * @throws {Error} - Throws an error if any element in the array is not a function.

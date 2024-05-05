@@ -1,6 +1,6 @@
 'use strict'
 
-const get = require("./get")
+const get = require('./get')
 
 /**
  * Get unique values of array by the iteratee function or property path.
