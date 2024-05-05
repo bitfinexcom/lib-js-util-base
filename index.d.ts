@@ -29,3 +29,4 @@ export function pickBy (obj: Object, predicate: (val: any, key: string) => boole
 export function shuffle<T> (array: Array<T>): Array<T>
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
+export function uniqBy (array: Array, iteratee: Function | string): Array

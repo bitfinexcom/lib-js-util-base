@@ -31,6 +31,7 @@ const pickBy = require('./src/pickBy')
 const shuffle = require('./src/shuffle')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
+const uniqBy = require('./src/uniqBy')
 
 module.exports = {
   camelize,
@@ -63,5 +64,6 @@ module.exports = {
   pickBy,
   shuffle,
   sum,
-  sumBy
+  sumBy,
+  uniqBy
 }
