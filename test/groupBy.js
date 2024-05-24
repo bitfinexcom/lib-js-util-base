@@ -80,8 +80,6 @@ describe('groupBy', () => {
 
     const groupedItems = groupBy(items, item => Math.floor(item.age / 10))
 
-    console.log('GRE', groupedItems)
-
     assert.deepStrictEqual(groupedItems, {
       2: [
         { id: 1, age: 25 },
