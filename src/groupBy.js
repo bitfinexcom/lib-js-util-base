@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 
 /**
  * Groups the elements of an array by a specified key.
