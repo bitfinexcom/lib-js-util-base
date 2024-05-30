@@ -27,4 +27,20 @@ describe('flow', () => {
 
     assert.throws(() => flow([fn1, fn2, fn3]), Error)
   })
+
+  it('should work with functions that take multiple arguments', () => {
+    const add = (a, b, c) => a + b + c
+    const square = (a) => a * a
+
+    const result = flow([add, square])(2, 3, 4)
+    assert.strictEqual(result, 81)
+  })
+
+  it('should work with complex arguments', () => {
+    const add = (a, b) => [{ a, b }, a + b]
+    const multiply = ([args, res]) => [args, args.a * args.b * res]
+    const subtract = ([args, res]) => res - args.a
+
+    assert.strictEqual(flow([add, multiply, subtract])(2, 3), 28)
+  })
 })
