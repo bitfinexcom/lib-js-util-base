@@ -6,7 +6,12 @@
  * @param {object} object - The object to invert.
  * @returns {object} - The new object with inverted key-value pairs.
  */
-const invert = (object) =>
-  Object.fromEntries(Object.entries(object).map(([key, value]) => [value, key]))
+const invert = (object) => {
+  const newObject = {}
+  for (const key in object) {
+    newObject[object[key]] = key
+  }
+  return newObject
+}
 
 module.exports = invert
