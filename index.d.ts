@@ -6,6 +6,7 @@ export function freezeDeep (obj: Object): Object
 export function get (obj: Object, path: string | Array<string | number>, defaultValue: any): any
 export function getArrayHasIntersect (arr1: Array<any>, arr2: Array<any>): boolean
 export function getArrayUniq (arr: Array<any>): Array<any>
+export function groupBy<T> (array: Array<T>, key: string | ((item: T) => string)): { [key: string]: Array<T> }
 export function isEmpty (val: any): boolean
 export function isEqual (value: any, another: any): boolean
 export function isFinite (val: any): boolean

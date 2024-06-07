@@ -8,6 +8,7 @@ const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
 const getErrorMessage = require('./src/getErrorMessage')
+const groupBy = require('./src/groupBy')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
 const isFinite = require('./src/isFinite')
@@ -38,6 +39,7 @@ module.exports = {
   getArrayHasIntersect,
   getArrayUniq,
   getErrorMessage,
+  groupBy,
   isEmpty,
   isEqual,
   isFinite,

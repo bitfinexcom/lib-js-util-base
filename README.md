@@ -10,6 +10,7 @@ Currently supported utils:
 - `get` - get the object members by path
 - `getArrayHasIntersect` - checks if arrays have at least one common value
 - `getArrayUniq` - gets unique values form array
+- `groupBy` - groups the elements of an array by a specified key.
 - `isEmpty` - checks if value is an empty object, collection, map, or set
 - `isEqual` - check if passed two values are equal
 - `isFinite` - checks if input is a finite number.
