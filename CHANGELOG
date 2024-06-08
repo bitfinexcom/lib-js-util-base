@@ -3,6 +3,7 @@
 - feat: invert
 - feat: mapValues
 - feat: uniqBy
+- feat: groupBy
 
 #1.12.0
 - feat: sum

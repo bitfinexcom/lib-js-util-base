@@ -8,6 +8,7 @@ export function getArrayHasIntersect (arr1: Array<any>, arr2: Array<any>): boole
 export function getArrayUniq (arr: Array<any>): Array<any>
 export function getErrorMessage (obj: obj): string
 export function invert (obj: Object): Object
+export function groupBy<T> (array: Array<T>, key: string | ((item: T) => string)): { [key: string]: Array<T> }
 export function isEmpty (val: any): boolean
 export function isEqual (value: any, another: any): boolean
 export function isFinite (val: any): boolean
