@@ -3,11 +3,13 @@
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
 const cloneDeep = require('./src/cloneDeep')
+const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
 const getErrorMessage = require('./src/getErrorMessage')
+const invert = require('./src/invert')
 const groupBy = require('./src/groupBy')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
@@ -19,6 +21,7 @@ const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
 const isString = require('./src/isString')
 const mapKeys = require('./src/mapKeys')
+const mapValues = require('./src/mapValues')
 const max = require('./src/max')
 const merge = require('./src/merge')
 const min = require('./src/min')
@@ -29,6 +32,7 @@ const pickBy = require('./src/pickBy')
 const shuffle = require('./src/shuffle')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
+const uniqBy = require('./src/uniqBy')
 
 module.exports = {
   camelize,
@@ -39,6 +43,7 @@ module.exports = {
   getArrayHasIntersect,
   getArrayUniq,
   getErrorMessage,
+  invert,
   groupBy,
   isEmpty,
   isEqual,
@@ -49,7 +54,9 @@ module.exports = {
   isObject,
   isPlainObject,
   isString,
+  flow,
   mapKeys,
+  mapValues,
   max,
   merge,
   min,
@@ -59,5 +66,6 @@ module.exports = {
   pickBy,
   shuffle,
   sum,
-  sumBy
+  sumBy,
+  uniqBy
 }

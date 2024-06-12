@@ -1,4 +1,8 @@
 #1.13.0
+- feat: flow
+- feat: invert
+- feat: mapValues
+- feat: uniqBy
 - feat: groupBy
 
 #1.12.0

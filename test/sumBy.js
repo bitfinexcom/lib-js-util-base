@@ -18,4 +18,16 @@ describe('sumBy', () => {
     assert.strictEqual(sumBy([{ foo: 1 }, { foo: 2 }, { foo: 3 }], {}), 0)
     assert.strictEqual(sumBy([{ foo: 1 }, { foo: 2 }, { foo: 3 }], null), 0)
   })
+
+  it('should return 0 if array is empty', () => {
+    assert.strictEqual(sumBy([], (i) => i.foo), 0)
+  })
+
+  it('should return 0 if first argument is not an array', () => {
+    assert.strictEqual(sumBy({}, (i) => i.foo), 0)
+  })
+
+  it('should skip zero or nullable elements', () => {
+    assert.strictEqual(sumBy([1, 2, undefined, null, 0], (i) => i), 3)
+  })
 })
