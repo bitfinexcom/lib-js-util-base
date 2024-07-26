@@ -3,6 +3,7 @@
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
 const cloneDeep = require('./src/cloneDeep')
+const difference = require('./src/difference')
 const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
@@ -38,6 +39,7 @@ module.exports = {
   camelize,
   capitalize,
   cloneDeep,
+  difference,
   freezeDeep,
   get,
   getArrayHasIntersect,
