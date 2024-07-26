@@ -32,3 +32,4 @@ export function shuffle<T> (array: Array<T>): Array<T>
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
 export function uniqBy (array: Array, iteratee: Function | string): Array
+export function without (array: Array, ...values: Array): Array

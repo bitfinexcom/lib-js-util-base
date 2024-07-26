@@ -34,6 +34,7 @@ const shuffle = require('./src/shuffle')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const uniqBy = require('./src/uniqBy')
+const without = require('./src/without')
 
 module.exports = {
   camelize,
@@ -69,5 +70,6 @@ module.exports = {
   shuffle,
   sum,
   sumBy,
-  uniqBy
+  uniqBy,
+  without
 }
