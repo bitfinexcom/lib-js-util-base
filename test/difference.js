@@ -7,6 +7,11 @@ const difference = require('../src/difference')
 
 describe('difference', () => {
   it('should return the same array if values is not an array', () => {
+    const result = difference([1, 2, 3], 'string')
+    assert.deepStrictEqual(result, [1, 2, 3])
+  })
+
+  it('should return the same array if values is not an array', () => {
     const result = difference([1, 2, 3], ['string'])
     assert.deepStrictEqual(result, [1, 2, 3])
   })
