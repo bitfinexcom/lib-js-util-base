@@ -3,6 +3,7 @@
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
 const cloneDeep = require('./src/cloneDeep')
+const difference = require('./src/difference')
 const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
@@ -33,11 +34,13 @@ const shuffle = require('./src/shuffle')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const uniqBy = require('./src/uniqBy')
+const without = require('./src/without')
 
 module.exports = {
   camelize,
   capitalize,
   cloneDeep,
+  difference,
   freezeDeep,
   get,
   getArrayHasIntersect,
@@ -67,5 +70,6 @@ module.exports = {
   shuffle,
   sum,
   sumBy,
-  uniqBy
+  uniqBy,
+  without
 }

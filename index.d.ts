@@ -1,6 +1,7 @@
 export function camelize (str: string): string
 export function capitalize (str: string): string
 export function cloneDeep (obj: Object): Object
+export function difference (array: Array<any>, values: Array<any>): Array<any>
 export function flow (funcs: Array<Function>): Function
 export function freezeDeep (obj: Object): Object
 export function get (obj: Object, path: string | Array<string | number>, defaultValue: any): any
@@ -31,3 +32,4 @@ export function shuffle<T> (array: Array<T>): Array<T>
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
 export function uniqBy (array: Array, iteratee: Function | string): Array
+export function without (array: Array, ...values: Array): Array

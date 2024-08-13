@@ -6,6 +6,7 @@ Currently supported utils:
 - `camelize` - simple camel case
 - `capitalize` - make first char uppercase
 - `cloneDeep` - deep clone functionality for objects
+- `difference` - creates an array of values from the first argument not included in the second argument
 - `flow` - generate a composite function that returns the result of provided functions called by the chain; each previous function result passes as the argument of the next function in the chain
 - `freezeDeep` - deep freezes objects
 - `get` - get the object members by path
@@ -35,3 +36,4 @@ Currently supported utils:
 - `sum` - calculate sum of array items
 - `sumBy` - calculate sum of array items using iteratee function or string shortcut
 - `uniqBy` - get unique values of array by the iteratee function or property path
+- `without` - creates an array of values from the first argument excluding all given arguments
