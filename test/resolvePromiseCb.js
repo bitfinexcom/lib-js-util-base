@@ -5,7 +5,7 @@
 const assert = require('assert')
 const resolvePromiseCb = require('../src/resolvePromiseCb')
 
-describe.only('resolvePromiseCb', () => {
+describe('resolvePromiseCb', () => {
   it('should handle callback errors', (done) => {
     resolvePromiseCb(new Error('foo'), null, (err) => {
       assert.strictEqual(err.message, 'foo')
