@@ -34,6 +34,7 @@ Currently supported utils:
 - `pickBy` -  provides new object that picks only specific fields of source object depending on predicate function filter
 - `resolvePromiseCb` -  helper to add callback support to async functions
 - `shuffle` - performs pseudo random shuffle on clone of the array
+- `snakeCase` - convert camel case and string/dash separated strings to snake case
 - `sum` - calculate sum of array items
 - `sumBy` - calculate sum of array items using iteratee function or string shortcut
 - `uniqBy` - get unique values of array by the iteratee function or property path
