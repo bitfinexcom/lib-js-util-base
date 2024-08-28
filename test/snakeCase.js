@@ -18,6 +18,10 @@ describe('snakeCase', () => {
     assert.equal(snakeCase('camel Case STRING'), 'camel_case_string')
   })
 
+  it('should convert dashes to underscore', () => {
+    assert.equal(snakeCase('camel-case-string'), 'camel_case_string')
+  })
+
   it('should do nothing when is already in snake case', () => {
     assert.equal(snakeCase('camel_case_string'), 'camel_case_string')
   })
