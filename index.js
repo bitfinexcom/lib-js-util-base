@@ -32,6 +32,7 @@ const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
 const resolvePromiseCb = require('./src/resolvePromiseCb')
 const shuffle = require('./src/shuffle')
+const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const uniqBy = require('./src/uniqBy')
@@ -70,6 +71,7 @@ module.exports = {
   pickBy,
   resolvePromiseCb,
   shuffle,
+  snakeCase,
   sum,
   sumBy,
   uniqBy,
