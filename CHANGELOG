@@ -1,3 +1,7 @@
+#1.15.0
+- feat: snakeCase
+- feat: promiseResolveCb
+
 #1.14.0
 - feat: difference
 - feat: without
