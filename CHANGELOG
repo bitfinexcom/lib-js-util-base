@@ -1,3 +1,6 @@
+#1.16.0
+- feat: regex validations
+
 #1.15.0
 - feat: snakeCase
 - feat: promiseResolveCb

@@ -39,3 +39,4 @@ Currently supported utils:
 - `sumBy` - calculate sum of array items using iteratee function or string shortcut
 - `uniqBy` - get unique values of array by the iteratee function or property path
 - `without` - creates an array of values from the first argument excluding all given arguments
+- `[ NUMBER, EMAIL, PATH, NAME, NAME_WITH_DIGITS, INPUT, ADDRESS, PHONE_CODE, IMAGE, FILE, FILENAME, ADMIN_PASSWORD ]` - list of regex validations

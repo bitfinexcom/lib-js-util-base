@@ -76,6 +76,6 @@ module.exports = {
   sum,
   sumBy,
   uniqBy,
-  without,
-  validations
+  validations,
+  without
 }
