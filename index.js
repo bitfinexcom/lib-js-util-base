@@ -36,8 +36,8 @@ const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const uniqBy = require('./src/uniqBy')
+const validation = require('./src/validations')
 const without = require('./src/without')
-const validations = require('./src/validations')
 
 module.exports = {
   camelize,
@@ -76,6 +76,6 @@ module.exports = {
   sum,
   sumBy,
   uniqBy,
-  validations,
+  validation,
   without
 }
