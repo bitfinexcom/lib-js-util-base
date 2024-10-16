@@ -36,7 +36,7 @@ const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const uniqBy = require('./src/uniqBy')
-const validation = require('./src/validations')
+const validateInput = require('./src/validateInput')
 const without = require('./src/without')
 
 module.exports = {
@@ -76,6 +76,6 @@ module.exports = {
   sum,
   sumBy,
   uniqBy,
-  validation,
+  validateInput,
   without
 }

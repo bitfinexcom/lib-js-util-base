@@ -34,5 +34,5 @@ export function snakeCase (str: string): string
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
 export function uniqBy (array: Array, iteratee: Function | string): Array
-export const validation : { NUMBER: RegExp; EMAIL: RegExp ; PATH: RegExp; NAME: RegExp; NAME_WITH_DIGITS: RegExp; INPUT: RegExp; ADDRESS: RegExp; PHONE_CODE: RegExp; IMAGE: RegExp; FILE: RegExp; FILENAME: RegExp; ADMIN_PASSWORD: RegExp }
+export function validateInput ( input: string, format: string ): Boolean
 export function without (array: Array, ...values: Array): Array
