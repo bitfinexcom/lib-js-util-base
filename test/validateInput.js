@@ -170,6 +170,29 @@ describe('validations', () => {
     assert.strictEqual(validateInput('😊', 'PHONE_CODE'), false) // emoji
   })
 
+  it('PHONE, validate phone code', () => {
+    assert.strictEqual(validateInput('+1 234 567 8900', 'PHONE'), true)
+    assert.strictEqual(validateInput('123 45 678 9334', 'PHONE'), true)
+    assert.strictEqual(validateInput('+12 3456', 'PHONE'), true)
+    assert.strictEqual(validateInput('+44 20 1234 5678', 'PHONE'), true)
+    assert.strictEqual(validateInput('123-456-7890', 'PHONE'), true)
+    assert.strictEqual(validateInput('(123) 456-7890', 'PHONE'), true)
+    assert.strictEqual(validateInput('+91 (22) 1234 5678', 'PHONE'), true)
+    assert.strictEqual(validateInput('+49 30 123456', 'PHONE'), true)
+    assert.strictEqual(validateInput('001 234 567 8900', 'PHONE'), true)
+    assert.strictEqual(validateInput('+81 3-1234-5678', 'PHONE'), true)
+    assert.strictEqual(validateInput('0044 20 1234 5678', 'PHONE'), true)
+    assert.strictEqual(validateInput('12-34-56-78', 'PHONE'), true)
+    assert.strictEqual(validateInput('123-456-78 90', 'PHONE'), true)
+
+    assert.strictEqual(validateInput('abc-def-ghij', 'PHONE'), false) // Non-numeric
+    assert.strictEqual(validateInput('+44 1234 56789 0123', 'PHONE'), false) // Too long
+    assert.strictEqual(validateInput('+12 34-56-78-90-12', 'PHONE'), false) // Too many parts
+    assert.strictEqual(validateInput('+33 1 23 45 67 89', 'PHONE'), false) // Too many parts
+    assert.strictEqual(validateInput('++123 456', 'PHONE'), false) // Extra plus sign
+    assert.strictEqual(validateInput('123 456 7890a', 'PHONE'), false) // Extra character
+  })
+
   it('IMAGE, validate image uri', () => {
     assert.strictEqual(validateInput('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA', 'IMAGE'), true) // image/png
     assert.strictEqual(validateInput('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIu', 'IMAGE'), true) // image/jpeg
