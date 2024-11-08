@@ -4,6 +4,7 @@
 - feat: findLastIndex
 - feat: isMatch
 - feat: isObjectLike
+- feat: mean
 
 #1.16.0
 - feat: regex validations

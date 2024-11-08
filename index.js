@@ -29,6 +29,7 @@ const isString = require('./src/isString')
 const mapKeys = require('./src/mapKeys')
 const mapValues = require('./src/mapValues')
 const max = require('./src/max')
+const mean = require('./src/mean')
 const merge = require('./src/merge')
 const min = require('./src/min')
 const omit = require('./src/omit')
@@ -74,6 +75,7 @@ module.exports = {
   mapKeys,
   mapValues,
   max,
+  mean,
   merge,
   min,
   omit,

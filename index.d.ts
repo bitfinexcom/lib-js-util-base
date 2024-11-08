@@ -27,6 +27,7 @@ export function isString (val: any): boolean
 export function mapKeys(obj: Object, mapper: (val: any, key: string) => string): Object
 export function mapValues(obj: Object, mapper: (val: any, key: string) => any): Object
 export function max (array: Array<any>): any
+export function mean (values: Array<number>): number
 export function merge (obj: Object, ...sources: Object[]): Object
 export function min (array: Array<any>): any
 export function omit (obj: Object, keys: Array<string>): Object
