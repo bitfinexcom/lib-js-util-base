@@ -93,6 +93,7 @@ module.exports = {
   union,
   uniqBy,
   uniqWith,
+  update,
   validateInput,
   without
 }
