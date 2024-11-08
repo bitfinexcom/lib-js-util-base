@@ -1,6 +1,7 @@
 export function assignInWith (obj: Object, ...sources: Object[]): Object
 export function camelize (str: string): string
 export function capitalize (str: string): string
+export function clone (obj: Object): Object
 export function cloneDeep (obj: Object): Object
 export function difference (array: Array<any>, values: Array<any>): Array<any>
 export function flow (funcs: Array<Function>): Function

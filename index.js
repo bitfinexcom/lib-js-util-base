@@ -3,6 +3,7 @@
 const assignInWith = require('./src/assignWith')
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
+const clone = require('./src/clone')
 const cloneDeep = require('./src/cloneDeep')
 const difference = require('./src/difference')
 const flow = require('./src/flow')
