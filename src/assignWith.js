@@ -3,8 +3,8 @@
 /**
  * Assigns the object properties from the sources
  *
- * @param {object} object 
- * @param  {...(object|Function)} rest 
+ * @param {object} object
+ * @param  {...(object|Function)} rest
  * @returns {object}
  */
 const assignInWith = (object, ...rest) => {

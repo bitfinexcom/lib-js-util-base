@@ -2,7 +2,7 @@
 
 /**
  * Returns the union of the given arrays.
- * 
+ *
  * @param {...Array} arrays The arrays to inspect.
  * @returns {Array} Returns the new array of combined values.
  */

@@ -6,7 +6,8 @@
 - feat: isObjectLike
 - feat: mean
 - feat: union
-- feat: uniqueWith
+- feat: uniqWith
+- feat: update
 
 #1.16.0
 - feat: regex validations
