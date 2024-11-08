@@ -23,6 +23,7 @@ const isMatch = require('./src/isMatch')
 const isNil = require('./src/isNil')
 const isNumber = require('./src/isNumber')
 const isObject = require('./src/isObject')
+const isObjectLike = require('./src/isObjectLike')
 const isPlainObject = require('./src/isPlainObject')
 const isString = require('./src/isString')
 const mapKeys = require('./src/mapKeys')
@@ -67,6 +68,7 @@ module.exports = {
   isNil,
   isNumber,
   isObject,
+  isObjectLike,
   isPlainObject,
   isString,
   mapKeys,

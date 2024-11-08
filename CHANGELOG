@@ -3,6 +3,7 @@
 - feat: clone
 - feat: findLastIndex
 - feat: isMatch
+- feat: isObjectLike
 
 #1.16.0
 - feat: regex validations

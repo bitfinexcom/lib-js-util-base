@@ -25,6 +25,7 @@ Currently supported utils:
 - `isNil` - checks whenever value is null or undefined
 - `isNumber` - checks if input is a number.
 - `isObject` - checks if the input is not a nullable object instance
+- `isObjectLike` - Checks if passed `value` is object-like. A value is object-like if it's not `null`
 - `isPlainObject` - checks if input is object, not null object and not array object
 - `isString` - checks if input is a string
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function
