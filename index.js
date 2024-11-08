@@ -43,6 +43,8 @@ const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const union = require('./src/union')
 const uniqBy = require('./src/uniqBy')
+const uniqWith = require('./src/uniqWith')
+const update = require('./src/update')
 const validateInput = require('./src/validateInput')
 const without = require('./src/without')
 
@@ -90,6 +92,7 @@ module.exports = {
   sumBy,
   union,
   uniqBy,
+  uniqWith,
   validateInput,
   without
 }

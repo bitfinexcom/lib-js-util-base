@@ -41,5 +41,6 @@ export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
 export function union (...arrays: Array[]): Array
 export function uniqBy (array: Array, iteratee: Function | string): Array
+export function uniqWith (array: Array, comparator: Function): Array
 export function validateInput ( input: string, format: string ): Boolean
 export function without (array: Array, ...values: Array): Array

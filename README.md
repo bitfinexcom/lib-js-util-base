@@ -45,5 +45,6 @@ Currently supported utils:
 - `sumBy` - calculate sum of array items using iteratee function or string shortcut
 - `union` - Returns the union of the given arrays
 - `uniqBy` - get unique values of array by the iteratee function or property path
+- `uniqWith` - Returns a new array with unique values, using a comparator function
 - `validateInput` - validates the input based on the regex format options: `NUMBER | EMAIL | PATH | NAME | NAME_WITH_DIGITS | INPUT | ADDRESS | PHONE_CODE | PHONE | IMAGE | FILE | FILENAME | PASSWORD`
 - `without` - creates an array of values from the first argument excluding all given arguments
