@@ -5,6 +5,7 @@
 - feat: isMatch
 - feat: isObjectLike
 - feat: mean
+- feat: union
 
 #1.16.0
 - feat: regex validations
