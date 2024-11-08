@@ -15,6 +15,14 @@ describe('clone', () => {
     assert.strictEqual(cloned.c.e, object.c.e)
   })
 
+  it('should work with arrays', () => {
+    const array = [1, 2, 3, { a: 1 }]
+    const cloned = clone(array)
+    assert.deepStrictEqual(cloned, array)
+    assert.notStrictEqual(cloned, array)
+    assert.strictEqual(cloned[3], array[3])
+  })
+
   it('should handle edge cases', () => {
     assert.deepStrictEqual(clone(), {})
     assert.deepStrictEqual(clone(null), {})
