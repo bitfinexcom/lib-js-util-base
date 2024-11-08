@@ -1,5 +1,6 @@
 'use strict'
 
+const assignInWith = require('./src/assignWith')
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
 const cloneDeep = require('./src/cloneDeep')

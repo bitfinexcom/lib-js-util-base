@@ -3,6 +3,7 @@
 General node js utils library.
 
 Currently supported utils:
+- `assignWith` - Assigns the object properties from the sources
 - `camelize` - simple camel case
 - `capitalize` - make first char uppercase
 - `cloneDeep` - deep clone functionality for objects
