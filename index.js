@@ -6,6 +6,7 @@ const capitalize = require('./src/capitalize')
 const clone = require('./src/clone')
 const cloneDeep = require('./src/cloneDeep')
 const difference = require('./src/difference')
+const findLastIndex = require('./src/findLastIndex')
 const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
 const get = require('./src/get')
@@ -42,10 +43,14 @@ const validateInput = require('./src/validateInput')
 const without = require('./src/without')
 
 module.exports = {
+  assignInWith,
   camelize,
   capitalize,
+  clone,
   cloneDeep,
   difference,
+  findLastIndex,
+  flow,
   freezeDeep,
   get,
   getArrayHasIntersect,

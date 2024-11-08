@@ -4,6 +4,7 @@ export function capitalize (str: string): string
 export function clone (obj: Object): Object
 export function cloneDeep (obj: Object): Object
 export function difference (array: Array<any>, values: Array<any>): Array<any>
+export function findLastIndex (array: Array<any>, predicate: Function): number
 export function flow (funcs: Array<Function>): Function
 export function freezeDeep (obj: Object): Object
 export function get (obj: Object, path: string | Array<string | number>, defaultValue: any): any

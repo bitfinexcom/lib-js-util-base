@@ -9,6 +9,7 @@ Currently supported utils:
 - `clone` - Shallow clone the object
 - `cloneDeep` - deep clone functionality for objects
 - `difference` - creates an array of values from the first argument not included in the second argument
+- `findLastIndex` - Returns the index of the last element in the array that satisfies the provided testing function.
 - `flow` - generate a composite function that returns the result of provided functions called by the chain; each previous function result passes as the argument of the next function in the chain
 - `freezeDeep` - deep freezes objects
 - `get` - get the object members by path
