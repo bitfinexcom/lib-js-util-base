@@ -21,6 +21,7 @@ Currently supported utils:
 - `isEqual` - check if passed two values are equal
 - `isFinite` - checks if input is a finite number.
 - `isFunction` - checks if input is a Function object.
+- `isMatch` - Checks if first argument is a match with last
 - `isNil` - checks whenever value is null or undefined
 - `isNumber` - checks if input is a number.
 - `isObject` - checks if the input is not a nullable object instance

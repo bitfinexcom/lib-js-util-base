@@ -17,6 +17,7 @@ export function isEmpty (val: any): boolean
 export function isEqual (value: any, another: any): boolean
 export function isFinite (val: any): boolean
 export function isFunction (val: any): boolean
+export function isMatch (obj: Object, source: Object): boolean
 export function isNil (val: any): boolean
 export function isNumber (val: any): boolean
 export function isObject (verifiable: any): Boolean

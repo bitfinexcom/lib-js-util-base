@@ -19,6 +19,7 @@ const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
 const isFinite = require('./src/isFinite')
 const isFunction = require('./src/isFunction')
+const isMatch = require('./src/isMatch')
 const isNil = require('./src/isNil')
 const isNumber = require('./src/isNumber')
 const isObject = require('./src/isObject')
@@ -62,12 +63,12 @@ module.exports = {
   isEqual,
   isFinite,
   isFunction,
+  isMatch,
   isNil,
   isNumber,
   isObject,
   isPlainObject,
   isString,
-  flow,
   mapKeys,
   mapValues,
   max,
