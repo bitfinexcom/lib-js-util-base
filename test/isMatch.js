@@ -42,4 +42,9 @@ describe('isMatch', () => {
     assert.ok(!isMatch(str, 'abd'))
     assert.ok(!isMatch({}, 'abc'))
   })
+
+  it('should return true if source is not defined', () => {
+    const num = 123
+    assert.ok(isMatch(num))
+  })
 })

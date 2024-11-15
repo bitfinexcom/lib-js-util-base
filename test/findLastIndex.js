@@ -19,4 +19,11 @@ describe('findLastIndex', () => {
     assert.strictEqual(findLastIndex(array, (n) => n.a % 2 === 1), 4)
     assert.strictEqual(findLastIndex(array, (n) => n.a === 6), -1)
   })
+
+  it('should allow to use last index as a starting point', () => {
+    const array = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2]
+    assert.strictEqual(findLastIndex(array, (n) => n === 2), 9)
+    assert.strictEqual(findLastIndex(array, (n) => n === 2, 8), 1)
+    assert.strictEqual(findLastIndex(array, (n) => n === 6, 4), -1)
+  })
 })

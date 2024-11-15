@@ -10,6 +10,7 @@
 const isMatch = (object, source) => {
   if (object === source) return true
   if (!object) return false
+  if (!source) return true
   if (typeof source === 'string') {
     if (typeof object === 'string') {
       return object.slice(0, source.length) === source

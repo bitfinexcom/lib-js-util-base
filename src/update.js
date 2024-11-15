@@ -14,9 +14,16 @@ const update = (object, path, updater) => {
   if (!path) return
   if (!updater) return
   const pathArray = pathToArray(path)
-  const key = pathArray.pop()
-  const target = pathArray.reduce((acc, key) => acc[key], object)
-  target[key] = updater(target[key])
+  pathArray.reduce((parent, key, index) => {
+    if (index === pathArray.length - 1) {
+      parent[key] = updater(parent[key])
+      return parent
+    }
+    if (!parent[key]) {
+      parent[key] = {}
+    }
+    return parent[key]
+  }, object)
 }
 
 module.exports = update

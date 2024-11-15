@@ -42,4 +42,14 @@ describe('assignInWith', () => {
     assignInWith(object, (objValue = 0, srcValue = 0) => objValue + srcValue)
     assert.deepStrictEqual(object, { a: 1, b: 2 })
   })
+
+  it('', () => {
+    const object = { a: 1, b: 2 }
+    const source = { b: 4, c: 3 }
+
+    const customizer = (objValue, srcValue) => {
+      return (objValue === undefined) ? srcValue : undefined
+    }
+    assert.deepStrictEqual(assignInWith(object, source, customizer), { a: 1, b: 4, c: 3 })
+  })
 })

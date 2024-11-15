@@ -10,7 +10,7 @@ const union = (...arrays) => {
   if (arrays.length === 0) return []
   const result = []
   arrays.forEach((array) => {
-    array?.forEach((value) => {
+    Array.isArray(array) && array.forEach((value) => {
       if (!result.includes(value)) {
         result.push(value)
       }

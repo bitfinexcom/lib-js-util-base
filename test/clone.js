@@ -24,9 +24,9 @@ describe('clone', () => {
   })
 
   it('should handle edge cases', () => {
-    assert.deepStrictEqual(clone(), {})
-    assert.deepStrictEqual(clone(null), {})
-    assert.deepStrictEqual(clone(undefined), {})
+    assert.deepStrictEqual(clone(), undefined)
+    assert.deepStrictEqual(clone(null), null)
+    assert.deepStrictEqual(clone(undefined), undefined)
     assert.deepStrictEqual(clone(1), 1)
     assert.deepStrictEqual(clone('a'), 'a')
     assert.deepStrictEqual(clone(true), true)

@@ -19,4 +19,8 @@ describe('union', () => {
     assert.deepStrictEqual(union([]), [])
     assert.deepStrictEqual(union([], []), [])
   })
+
+  it('should skip non array arguments', () => {
+    assert.deepStrictEqual(union([1, 2], { a: 1 }, [3]), [1, 2, 3])
+  })
 })

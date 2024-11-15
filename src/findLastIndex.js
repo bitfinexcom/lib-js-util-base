@@ -7,12 +7,13 @@
  * @param {Function} predicate
  * @returns {number}
  */
-const findLastIndex = (array, predicate) => {
-  let index = array.length
-  while (index--) {
+const findLastIndex = (array, predicate, fromIndex) => {
+  let index = fromIndex || array.length - 1
+  while (index >= 0) {
     if (predicate(array[index])) {
       return index
     }
+    index--
   }
   return -1
 }
