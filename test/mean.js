@@ -19,4 +19,9 @@ describe('mean', () => {
     assert(isNaN(mean(null)))
     assert(isNaN(mean(undefined)))
   })
+
+  it('should cast strings to numbers', () => {
+    assert.strictEqual(mean(['2', '3', '4']), 3)
+    assert.strictEqual(mean(['2', '3', '4', '5']), 3.5)
+  })
 })

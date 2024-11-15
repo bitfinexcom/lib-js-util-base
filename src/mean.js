@@ -11,7 +11,7 @@ const mean = (arr) => {
   if (length === 0) {
     return NaN
   }
-  return arr.reduce((acc, val) => acc + val, 0) / arr.length
+  return arr.reduce((acc, val) => +acc + +val, 0) / arr.length
 }
 
 module.exports = mean
