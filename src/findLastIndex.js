@@ -5,6 +5,7 @@
  *
  * @param {Array} array
  * @param {Function} predicate
+ * @param {number} fromIndex
  * @returns {number}
  */
 const findLastIndex = (array, predicate, fromIndex) => {
