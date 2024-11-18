@@ -1,3 +1,14 @@
+#1.17.0
+- feat: assignWith
+- feat: clone
+- feat: findLastIndex
+- feat: isMatch
+- feat: isObjectLike
+- feat: mean
+- feat: union
+- feat: uniqWith
+- feat: update
+
 #1.16.0
 - feat: regex validations
 

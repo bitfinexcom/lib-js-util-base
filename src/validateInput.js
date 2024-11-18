@@ -8,7 +8,7 @@ const CHARACTERS = '\\p{L}\\p{M}'
 const INPUT_BASE_REG_EXP = new RegExp(`-0-9.,;:<>?/\n${CHARACTERS}'_ &()/+@%`, 'u')
 const DIGITS = '0-9'
 
-const NUMBER = /^-?\d*[\.]?\d+$/
+const NUMBER = /^-?\d*[.]?\d+$/
 const EMAIL = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i
 const PATH = /([^/]*)\/*$/
 const NAME = new RegExp(`^[-${CHARACTERS}' &()/]+$`, 'u')

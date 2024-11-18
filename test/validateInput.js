@@ -274,4 +274,8 @@ describe('validations', () => {
     assert.strictEqual(validateInput('12345678!', 'PASSWORD'), false) // No letters
     assert.strictEqual(validateInput('Password!', 'PASSWORD'), false) // No digits
   })
+
+  it('should handle unsupported format', () => {
+    assert.throws(() => validateInput('test', 'UNSUPPORTED_FORMAT'), Error)
+  })
 })
