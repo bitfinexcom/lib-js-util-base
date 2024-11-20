@@ -26,6 +26,7 @@ const isObject = require('./src/isObject')
 const isObjectLike = require('./src/isObjectLike')
 const isPlainObject = require('./src/isPlainObject')
 const isString = require('./src/isString')
+const isUndefined = require('./src/isUndefined')
 const mapKeys = require('./src/mapKeys')
 const mapValues = require('./src/mapValues')
 const max = require('./src/max')
@@ -75,6 +76,7 @@ module.exports = {
   isObjectLike,
   isPlainObject,
   isString,
+  isUndefined,
   mapKeys,
   mapValues,
   max,

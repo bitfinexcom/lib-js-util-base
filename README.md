@@ -28,6 +28,7 @@ Currently supported utils:
 - `isObjectLike` - Checks if passed `value` is object-like. A value is object-like if it's not `null`
 - `isPlainObject` - checks if input is object, not null object and not array object
 - `isString` - checks if input is a string
+- `isUndefined` - checks if an input is undefined
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function
 - `mapValues` - Maps the values of an object or array using the provided iteratee function or property path
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
