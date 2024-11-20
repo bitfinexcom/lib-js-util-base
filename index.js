@@ -57,7 +57,6 @@ module.exports = {
   cloneDeep,
   difference,
   findLastIndex,
-  flow,
   freezeDeep,
   get,
   getArrayHasIntersect,
