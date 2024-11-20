@@ -21,6 +21,7 @@ const isNumber = require('./src/isNumber')
 const isObject = require('./src/isObject')
 const isPlainObject = require('./src/isPlainObject')
 const isString = require('./src/isString')
+const isUndefined = require('./src/isUndefined')
 const mapKeys = require('./src/mapKeys')
 const mapValues = require('./src/mapValues')
 const max = require('./src/max')
@@ -59,6 +60,7 @@ module.exports = {
   isObject,
   isPlainObject,
   isString,
+  isUndefined,
   flow,
   mapKeys,
   mapValues,
