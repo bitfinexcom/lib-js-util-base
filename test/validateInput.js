@@ -253,7 +253,7 @@ describe('validations', () => {
     assert.strictEqual(validateInput('invalid?file.txt', 'FILENAME'), false) // Contains ?
   })
 
-  it('ADMIN_PASSWORD, validate password', () => {
+  it('PASSWORD, validate password', () => {
     // valid admin password
     assert.strictEqual(validateInput('A1!strongpass', 'PASSWORD'), true)
     assert.strictEqual(validateInput('Secure#Password1', 'PASSWORD'), true)
@@ -273,6 +273,30 @@ describe('validations', () => {
     assert.strictEqual(validateInput('lowercase1!', 'PASSWORD'), false) // No uppercase letters
     assert.strictEqual(validateInput('12345678!', 'PASSWORD'), false) // No letters
     assert.strictEqual(validateInput('Password!', 'PASSWORD'), false) // No digits
+  })
+
+  it('URL, validate url', () => {
+    assert.strictEqual(validateInput('http://example.com', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.com', 'URL'), true)
+    assert.strictEqual(validateInput('http://www.example.com', 'URL'), true)
+    assert.strictEqual(validateInput('https://www.example.com', 'URL'), true)
+    assert.strictEqual(validateInput('https://sub.example.com', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.com/path/to/page', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.com/path?name=value', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.com/path#section', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.com/path?name=value#section', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.com:8080', 'URL'), true)
+    assert.strictEqual(validateInput('https://example..com', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.x', 'URL'), true)
+    assert.strictEqual(validateInput('https://example.com/path#', 'URL'), true)
+
+    // invalid url
+    assert.strictEqual(validateInput('https://', 'URL'), false)
+    assert.strictEqual(validateInput('example.com', 'URL'), false)
+    assert.strictEqual(validateInput('ftp://example.com', 'URL'), false)
+    assert.strictEqual(validateInput('https://example', 'URL'), false)
+    assert.strictEqual(validateInput('https://example com', 'URL'), false)
+    assert.strictEqual(validateInput('https://#section', 'URL'), false)
   })
 
   it('should handle unsupported format', () => {

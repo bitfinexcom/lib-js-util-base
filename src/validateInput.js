@@ -8,7 +8,7 @@ const CHARACTERS = '\\p{L}\\p{M}'
 const INPUT_BASE_REG_EXP = new RegExp(`-0-9.,;:<>?/\n${CHARACTERS}'_ &()/+@%`, 'u')
 const DIGITS = '0-9'
 
-const NUMBER = /^-?\d*[.]?\d+$/
+const NUMBER = /^[+-]?\d*[.]?\d+$/
 const EMAIL = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i
 const PATH = /([^/]*)\/*$/
 const NAME = new RegExp(`^[-${CHARACTERS}' &()/]+$`, 'u')
@@ -21,6 +21,7 @@ const IMAGE = /^data:image\/[A-Za-z+]+;base64,[A-Za-z0-9+/=]+$/
 const FILE = /^data:(image|application|video)\/[A-Za-z0-9+]+;base64,[A-Za-z0-9+/=]+$/
 const FILENAME = new RegExp(`^[-${DIGITS}.${CHARACTERS} ()_]+$`, 'u')
 const PASSWORD = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/
+const URL = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
 
 /**
  * @param {string} input
@@ -43,6 +44,7 @@ const validateInput = (input, format) => {
     case 'FILE': return FILE.test(input)
     case 'FILENAME': return FILENAME.test(input)
     case 'PASSWORD': return PASSWORD.test(input)
+    case 'URL': return URL.test(input)
 
     default: throw new Error('ERR_FORMAT_NOT_SUPPORTED')
   }
