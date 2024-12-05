@@ -7,7 +7,7 @@ const unset = require('../src/unset')
 const { itEach } = require('mocha-it-each')
 
 describe('unset', () => {
-  itEach('should be able to unset an object an any arbitrary depth',
+  itEach('should be able to unset an object an any arbitrary depth returning true on success',
     [
       [{ a: 'foo' }, 'a', {}],
       [{ a: 'bar', b: { a: 'foo' } }, 'b.a', { a: 'bar' }],
