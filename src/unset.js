@@ -3,6 +3,7 @@
 const pathToArray = require('./util/pathToArray')
 const isEmpty = require('./isEmpty')
 const isPlainObject = require('./isPlainObject')
+const get = require('./get')
 
 const _doUnset = (obj, path) => {
   const level = path.length - 1
@@ -24,10 +25,11 @@ const _doUnset = (obj, path) => {
  *
  * @param {any} object
  * @param {string | Array} path
- * @returns {boolean} true if the path was found and deleted, false otherwise
+ * @returns {boolean} true if the path was found and deleted or did not exist, false otherwise
  */
 const unset = (object, path) => {
-  return _doUnset(object, pathToArray(path))
+  _doUnset(object, pathToArray(path))
+  return get(object, path, undefined) === undefined
 }
 
 module.exports = unset

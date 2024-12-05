@@ -6,7 +6,7 @@ const assert = require('assert')
 const unset = require('../src/unset')
 const { itEach } = require('mocha-it-each')
 
-describe.only('unset', () => {
+describe('unset', () => {
   itEach('should be able to unset an object an any arbitrary depth',
     [
       [{ a: 'foo' }, 'a', {}],
@@ -20,7 +20,7 @@ describe.only('unset', () => {
     async ([obj, path, expected]) => {
       const found = unset(obj, path)
       assert.deepStrictEqual(obj, expected)
-      console.debug(found)
+      assert.strictEqual(found, true)
     })
 
   itEach('should return true even when target was not found ',
@@ -39,7 +39,7 @@ describe.only('unset', () => {
 
   itEach('should return false when target was found but could not be removed',
     [
-      // [Object.freeze({ a: 'foo' }), 'a'],
+      [Object.freeze({ a: 'foo' }), 'a'],
       [{ a: 'bar', b: Object.freeze({ a: 'foo' }) }, 'b.a'],
       [{ a: 'bar', b: Object.freeze({ a: 'foo', c: 'baz' }) }, 'b.c'],
       [{ a: 'baz', b: { a: Object.freeze({ c: 'baz' }) } }, 'b.a.c'],
