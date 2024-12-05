@@ -36,5 +36,8 @@
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
     "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "mocha-it-each": "^1.0.2"
   }
 }
