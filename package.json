@@ -35,9 +35,7 @@
   "devDependencies": {
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
-    "standard": "^17.1.0"
-  },
-  "dependencies": {
+    "standard": "^17.1.0",
     "mocha-it-each": "^1.0.2"
   }
 }
