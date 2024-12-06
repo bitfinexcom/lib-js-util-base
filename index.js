@@ -50,7 +50,6 @@ const validateInput = require('./src/validateInput')
 const without = require('./src/without')
 const unset = require('./src/unset')
 
-
 module.exports = {
   assignInWith,
   camelize,

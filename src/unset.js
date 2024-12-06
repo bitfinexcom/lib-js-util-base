@@ -23,8 +23,8 @@ const _doUnset = (obj, path) => {
 
 /**
  * Given a path to a property into an object, follow and unset the matching field at
- * any arbitrary depth removing any remnant empty object encountered. Returns true if 
- * the path was successfully unset or it didn't exist. False if the path was found but could not 
+ * any arbitrary depth removing any remnant empty object encountered. Returns true if
+ * the path was successfully unset or it didn't exist. False if the path was found but could not
  * be unset (such as frozen objects or native properties)
  * @param {any} object
  * @param {string | Array} path
