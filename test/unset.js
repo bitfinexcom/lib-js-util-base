@@ -10,6 +10,8 @@ describe('unset', () => {
   itEach('should be able to unset an object an any arbitrary depth returning true on success',
     [
       [{ a: 'foo' }, 'a', {}],
+      [{ b:  null }, 'b', {}],
+      [{ d:  0 }, 'd', {}],
       [{ a: 'bar', b: { a: 'foo' } }, 'b.a', { a: 'bar' }],
       [{ a: 'bar', b: { a: 'foo', c: 'baz' } }, 'b.a', { a: 'bar', b: { c: 'baz' } }],
       [{ a: 'baz', b: { a: { c: 'baz' } } }, 'b.a.c', { a: 'baz' }],
