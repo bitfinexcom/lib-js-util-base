@@ -21,7 +21,7 @@ const IMAGE = /^data:image\/[A-Za-z+]+;base64,[A-Za-z0-9+/=]+$/
 const FILE = /^data:(image|application|video)\/[A-Za-z0-9+]+;base64,[A-Za-z0-9+/=]+$/
 const FILENAME = new RegExp(`^[-${DIGITS}.${CHARACTERS} ()_]+$`, 'u')
 const PASSWORD = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/
-const URL = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
+const URL = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/
 
 /**
  * @param {string} input
