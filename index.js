@@ -48,6 +48,7 @@ const uniqWith = require('./src/uniqWith')
 const update = require('./src/update')
 const validateInput = require('./src/validateInput')
 const without = require('./src/without')
+const unset = require('./src/unset')
 
 module.exports = {
   assignInWith,
@@ -97,5 +98,6 @@ module.exports = {
   uniqWith,
   update,
   validateInput,
-  without
+  without,
+  unset
 }
