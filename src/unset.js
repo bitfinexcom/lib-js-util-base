@@ -10,9 +10,14 @@ const _doUnset = (obj, path) => {
   const key = path.shift()
   if (obj[key] !== undefined) {
     if (level > 0) _doUnset(obj[key], path)
-    if (level === 0 || (isPlainObject(obj[key]) && isEmpty(obj[key]))) {
+    if (level === 0 || ((isPlainObject(obj[key]) || Array.isArray(obj[key])) && isEmpty(obj[key]))) {
       try {
-        return !Object.isFrozen(obj) && delete obj[key]
+        if (Object.isFrozen(obj)) return false
+        if (Array.isArray(obj)) {
+          return obj.length === 0 || obj.splice(+key, 1).length > 0
+        } else {
+          return delete obj[key]
+        }
       } catch (err) {
         return false
       }

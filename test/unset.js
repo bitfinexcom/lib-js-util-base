@@ -10,13 +10,17 @@ describe('unset', () => {
   itEach('should be able to unset an object an any arbitrary depth returning true on success',
     [
       [{ a: 'foo' }, 'a', {}],
-      [{ b:  null }, 'b', {}],
-      [{ d:  0 }, 'd', {}],
+      [{ a: ['foo', 'bar'] }, 'a[1]', { a: ['foo'] }],
+      [{ a: 'foo', b: [{ a: 'bar', c: 'baz' }] }, 'b[0].a', { a: 'foo', b: [{ c: 'baz' }] }],
+      [{ b: null }, 'b', {}],
+      [{ d: 0 }, 'd', {}],
       [{ a: 'bar', b: { a: 'foo' } }, 'b.a', { a: 'bar' }],
       [{ a: 'bar', b: { a: 'foo', c: 'baz' } }, 'b.a', { a: 'bar', b: { c: 'baz' } }],
       [{ a: 'baz', b: { a: { c: 'baz' } } }, 'b.a.c', { a: 'baz' }],
+      [{ a: 'baz', b: { a: { c: [{ k: 'baz' }] } } }, 'b.a.c[0].k', { a: 'baz' }],
       [{ a: 'baz', b: { a: { c: 'baz', d: 'koo' } } }, 'b.a.c', { a: 'baz', b: { a: { d: 'koo' } } }],
       [{ a: 'baz', b: { a: { c: 'baz', d: 'koo' } } }, 'b.a.d', { a: 'baz', b: { a: { c: 'baz' } } }],
+      [{ a: 'baz', b: { a: { c: 'baz', d: [{ foo: 'koo', bar: 'fooz' }] } } }, 'b.a.d[0].bar', { a: 'baz', b: { a: { c: 'baz', d: [{ foo: 'koo' }] } } }],
       [{ a: 'baz', b: { a: { c: 'baz', d: 'koo' } } }, 'a', { b: { a: { c: 'baz', d: 'koo' } } }]
     ],
     async ([obj, path, expected]) => {
