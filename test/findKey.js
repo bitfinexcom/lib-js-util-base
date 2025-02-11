@@ -17,6 +17,11 @@ describe('findKey', () => {
     assert.deepStrictEqual(findKey(users, { address: { street: '5th Avenue' } }), 'barney')
   })
 
+  it('should return the key index when an array is given', () => {
+    const indexOfBarney = '0'
+    assert.deepStrictEqual(findKey(Object.values(users), { address: { street: '5th Avenue' } }), indexOfBarney)
+  })
+
   it('should not return the key when the predicate object contains more properties than the input', () => {
     assert.deepStrictEqual(findKey(users, { address: { ...users.barney.address, country: 'USA' } }), undefined)
   })
