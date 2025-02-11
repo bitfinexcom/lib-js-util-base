@@ -16,7 +16,9 @@ describe('pullAll', () => {
     ['return undefined when input is undefined', undefined, ['1', 1, 'a', 'b'], undefined],
     ['return input when input is not array', 123, ['1', 1, 'a', 'b'], 123],
     ['return input with null filter', validInput, null, validInput],
-    ['return input with undefined filter', validInput, undefined, validInput]
+    ['return input with undefined filter', validInput, undefined, validInput],
+    ['filter by exact string value', validInput, 'a', ['b', 'c', 1, '1']],
+    ['filter by exact number value', validInput, 1, ['a', 'b', 'c', '1']]
   ], ([_desc, input, filter, expectedOutput]) => {
     assert.deepStrictEqual(pullAll(input, filter), expectedOutput)
   })

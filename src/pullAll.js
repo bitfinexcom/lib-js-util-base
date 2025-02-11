@@ -6,7 +6,8 @@ const pullAll = (array, values) => {
   if (isNil(values) || !Array.isArray(array)) {
     return array
   }
-  return array.filter(item => !values.includes(item))
+  const isValuesArray = Array.isArray(values)
+  return array.filter(item => isValuesArray ? !values.includes(item) : item !== values)
 }
 
 module.exports = pullAll
