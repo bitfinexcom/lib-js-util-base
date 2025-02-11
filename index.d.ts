@@ -4,6 +4,7 @@ export function capitalize (str: string): string
 export function clone (obj: Object): Object
 export function cloneDeep (obj: Object): Object
 export function difference (array: Array<any>, values: Array<any>): Array<any>
+export function findKey (obj: Object, predicate: Function | Object): string
 export function findLastIndex (array: Array<any>, predicate: Function): number
 export function flow (funcs: Array<Function>): Function
 export function freezeDeep (obj: Object): Object
@@ -33,6 +34,7 @@ export function merge (obj: Object, ...sources: Object[]): Object
 export function min (array: Array<any>): any
 export function omit (obj: Object, keys: Array<string>): Object
 export function omitBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
+export function pullAll (array: Array, items: Array): Array
 export function pick (obj: Object, keys: Array<string>): Object
 export function pickBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function resolvePromiseCb<T> (err: any, res: T, cb: (err: any, res: T) => void): Promise<T>|void

@@ -1,3 +1,6 @@
+#1.20.0
+- feat: add pullAll
+- feat: add findKey
 #1.19.0
 - feat: add unset
 #1.18.1

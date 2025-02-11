@@ -6,6 +6,7 @@ const capitalize = require('./src/capitalize')
 const clone = require('./src/clone')
 const cloneDeep = require('./src/cloneDeep')
 const difference = require('./src/difference')
+const findKey = require('./src/findKey')
 const findLastIndex = require('./src/findLastIndex')
 const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
@@ -37,6 +38,7 @@ const omit = require('./src/omit')
 const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
+const pullAll = require('./src/pullAll')
 const resolvePromiseCb = require('./src/resolvePromiseCb')
 const shuffle = require('./src/shuffle')
 const snakeCase = require('./src/snakeCase')
@@ -57,6 +59,7 @@ module.exports = {
   clone,
   cloneDeep,
   difference,
+  findKey,
   findLastIndex,
   flow,
   freezeDeep,
@@ -88,6 +91,7 @@ module.exports = {
   omitBy,
   pick,
   pickBy,
+  pullAll,
   resolvePromiseCb,
   shuffle,
   snakeCase,
