@@ -9,6 +9,7 @@ Currently supported utils:
 - `clone` - Shallow clone the object
 - `cloneDeep` - deep clone functionality for objects
 - `difference` - creates an array of values from the first argument not included in the second argument
+- `findKey` - Returns the key in the object that matches with the object or function given as predicate
 - `findLastIndex` - Returns the index of the last element in the array that satisfies the provided testing function.
 - `flow` - generate a composite function that returns the result of provided functions called by the chain; each previous function result passes as the argument of the next function in the chain
 - `freezeDeep` - deep freezes objects
@@ -39,6 +40,7 @@ Currently supported utils:
 - `omitBy` -  provides new object that omits only specific fields of source object depending on predicate function filter
 - `pick` - provides new object that picks only specific fields of source object
 - `pickBy` -  provides new object that picks only specific fields of source object depending on predicate function filter
+- `pullAll` -  provides new array that filter the values given as second argumen
 - `resolvePromiseCb` -  helper to add callback support to async functions
 - `shuffle` - performs pseudo random shuffle on clone of the array
 - `snakeCase` - convert camel case and string/dash separated strings to snake case
