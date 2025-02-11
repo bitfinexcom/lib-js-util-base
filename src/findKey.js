@@ -20,12 +20,12 @@ const findKey = (object, predicate) => {
   if (isNil(object) || isNil(predicate)) {
     return undefined
   }
-  return Object.keys(object).find(key => {
-    const value = object[key]
-    return typeof predicate === 'function'
+  const isFnPredicate = typeof predicate === 'function'
+  return Object.entries(object).find(([key, value]) => {
+    return isFnPredicate
       ? predicate(value, key, object)
       : isMatchDeep(value, predicate)
-  }) || undefined
+  })?.[0]
 }
 
 module.exports = findKey

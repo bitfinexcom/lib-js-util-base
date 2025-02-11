@@ -17,6 +17,10 @@ describe('findKey', () => {
     assert.deepStrictEqual(findKey(users, { address: { street: '5th Avenue' } }), 'barney')
   })
 
+  it('should not return the key when the predicate object contains more properties than the input', () => {
+    assert.deepStrictEqual(findKey(users, { address: { ...users.barney.address, country: 'USA' } }), undefined)
+  })
+
   it('should return the key matching the predicate function', () => {
     assert.deepStrictEqual(findKey(users, (user) => user.age === 40), 'fred')
   })
