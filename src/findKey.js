@@ -9,7 +9,7 @@ const isMatchDeep = (source, target) => {
 
     if (typeof targetValue === 'object' && targetValue !== null) {
       if (typeof sourceValue !== 'object' || sourceValue === null) return false
-      return isMatchDeep(sourceValue, targetValue) // Recursive check for nested properties
+      return isMatchDeep(sourceValue, targetValue)
     }
 
     return sourceValue === targetValue
@@ -23,8 +23,8 @@ const findKey = (object, predicate) => {
   return Object.keys(object).find(key => {
     const value = object[key]
     return typeof predicate === 'function'
-      ? predicate(value, key, object) // Function predicate
-      : isMatchDeep(value, predicate) // Deep object matcher
+      ? predicate(value, key, object)
+      : isMatchDeep(value, predicate)
   }) || undefined
 }
 
