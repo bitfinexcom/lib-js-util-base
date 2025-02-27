@@ -6,6 +6,7 @@ const capitalize = require('./src/capitalize')
 const clone = require('./src/clone')
 const cloneDeep = require('./src/cloneDeep')
 const difference = require('./src/difference')
+const differenceWith = require('./src/differenceWith')
 const findLastIndex = require('./src/findLastIndex')
 const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
@@ -57,6 +58,7 @@ module.exports = {
   clone,
   cloneDeep,
   difference,
+  differenceWith,
   findLastIndex,
   flow,
   freezeDeep,
