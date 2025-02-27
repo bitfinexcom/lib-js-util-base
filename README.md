@@ -32,6 +32,7 @@ Currently supported utils:
 - `isUndefined` - checks if an input is undefined
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function
 - `mapValues` - Maps the values of an object or array using the provided iteratee function or property path
+- `matches` - creates a function that makes a deep partial comparison on a given object with the source
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
 - `mean` - Returns the mean of an array of numbers
 - `merge` - deep merge functionality for objects

@@ -30,6 +30,7 @@ const isString = require('./src/isString')
 const isUndefined = require('./src/isUndefined')
 const mapKeys = require('./src/mapKeys')
 const mapValues = require('./src/mapValues')
+const matches = require('./src/matches')
 const max = require('./src/max')
 const mean = require('./src/mean')
 const merge = require('./src/merge')
@@ -82,6 +83,7 @@ module.exports = {
   isUndefined,
   mapKeys,
   mapValues,
+  matches,
   max,
   mean,
   merge,
