@@ -45,6 +45,7 @@ const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const union = require('./src/union')
+const uniq = require('./src/uniq')
 const uniqBy = require('./src/uniqBy')
 const uniqWith = require('./src/uniqWith')
 const update = require('./src/update')
@@ -98,6 +99,7 @@ module.exports = {
   sum,
   sumBy,
   union,
+  uniq,
   uniqBy,
   uniqWith,
   update,

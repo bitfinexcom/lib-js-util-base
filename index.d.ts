@@ -43,6 +43,7 @@ export function snakeCase (str: string): string
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
 export function union (...arrays: Array[]): Array
+export function uniq (array: Array): Array
 export function uniqBy (array: Array, iteratee: Function | string): Array
 export function uniqWith (array: Array, comparator: Function): Array
 export function update (obj: Object, path: string | Array<string | number>, updater: Function): Object
