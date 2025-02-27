@@ -50,6 +50,7 @@ Currently supported utils:
 - `uniq` - Returns unique values of the array
 - `uniqBy` - get unique values of array by the iteratee function or property path
 - `uniqWith` - Returns a new array with unique values, using a comparator function
+- `unset` - Remove a property by the path in any depth, returns true if succeed, false otherwise
 - `update` - Update the object with the updater by path
 - `validateInput` - validates the input based on the regex format options: `NUMBER | EMAIL | PATH | NAME | NAME_WITH_DIGITS | INPUT | ADDRESS | PHONE_CODE | PHONE | IMAGE | FILE | FILENAME | PASSWORD`
 - `without` - creates an array of values from the first argument excluding all given arguments

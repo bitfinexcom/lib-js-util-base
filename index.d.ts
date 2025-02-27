@@ -46,6 +46,7 @@ export function union (...arrays: Array[]): Array
 export function uniq (array: Array): Array
 export function uniqBy (array: Array, iteratee: Function | string): Array
 export function uniqWith (array: Array, comparator: Function): Array
+export function unset(object: Object, path: string | Array<string | number>): boolean
 export function update (obj: Object, path: string | Array<string | number>, updater: Function): Object
 export function validateInput ( input: string, format: 'NUMBER' | 'EMAIL' | 'PATH' | 'NAME' | 'NAME_WITH_DIGITS' | 'INPUT' | 'ADDRESS' | 'PHONE_CODE' | 'PHONE' | 'IMAGE' | 'FILE' | 'FILENAME' | 'PASSWORD' | 'URL' ): Boolean
 export function without (array: Array, ...values: Array): Array
