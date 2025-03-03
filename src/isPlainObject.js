@@ -1,5 +1,6 @@
 'use strict'
 
-const isPlainObject = (val) => val !== null && typeof val === 'object' && !Array.isArray(val)
+const isUsingObjConstructor = (val) => Object.getPrototypeOf(val) === Object.prototype || Object.getPrototypeOf(val) === null
+const isPlainObject = (val) => val !== null && typeof val === 'object' && isUsingObjConstructor(val)
 
 module.exports = isPlainObject

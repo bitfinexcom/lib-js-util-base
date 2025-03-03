@@ -9,6 +9,10 @@ describe('isPlainObject', () => {
   it('should return true for a plain object', () => {
     assert.strictEqual(isPlainObject({}), true)
     assert.strictEqual(isPlainObject({ key: 'value' }), true)
+    // eslint-disable-next-line no-new-object
+    assert.strictEqual(isPlainObject(new Object()), true)
+    // eslint-disable-next-line no-new-object
+    assert.strictEqual(isPlainObject(new Object({ key: 'value ' })), true)
   })
 
   it('should return false for an array', () => {
@@ -17,6 +21,10 @@ describe('isPlainObject', () => {
 
   it('should return false for a function', () => {
     assert.strictEqual(isPlainObject(() => { }), false)
+  })
+
+  it('should return false for a date', () => {
+    assert.strictEqual(isPlainObject(new Date()), false)
   })
 
   it('should return false for a number', () => {
