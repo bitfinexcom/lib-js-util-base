@@ -5,18 +5,11 @@
 const isObject = require('./isObject')
 
 const cloneDeep = (obj, clones = new WeakMap()) => {
-  if (obj instanceof Function) {
-    return {}
-  }
-  if (!isObject(obj)) {
-    return obj
-  }
+  if (obj instanceof Function) return {}
+  if (!isObject(obj)) return obj
 
-  if (clones.has(obj)) {
-    return clones.get(obj)
-  }
-
-  if (obj instanceof Date) return new Date(obj)
+  if (clones.has(obj)) return clones.get(obj)
+  if (obj instanceof Date) return new Date(obj.getTime())
   if (obj instanceof RegExp) return new RegExp(obj)
   if (obj instanceof Map) {
     const newMap = new Map()
@@ -34,16 +27,17 @@ const cloneDeep = (obj, clones = new WeakMap()) => {
     })
     return newSet
   }
+  if (Buffer.isBuffer(obj)) return Buffer.from(obj)
+  if (ArrayBuffer.isView(obj) && !(obj instanceof DataView)) {
+    return new obj.constructor(obj)
+  }
 
-  const clonedObj = Array.isArray(obj) ? [] : {}
+  const clonedObj = Array.isArray(obj) ? [] : Object.create(Object.getPrototypeOf(obj))
   clones.set(obj, clonedObj)
+  Object.defineProperties(clonedObj, Object.getOwnPropertyDescriptors(obj))
 
-  if (Array.isArray(obj)) return obj.map(item => cloneDeep(item, clones))
-
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      clonedObj[key] = cloneDeep(obj[key], clones)
-    }
+  for (const key of Object.keys(clonedObj)) {
+    clonedObj[key] = cloneDeep(clonedObj[key], clones)
   }
 
   return clonedObj
