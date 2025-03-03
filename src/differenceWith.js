@@ -7,10 +7,10 @@
  * @returns {boolean}
  */
 
-/** 
+/**
  * Returns the elements of `array` that are not present in other array
  * using a comparator function or strict equality.
- * 
+ *
  * @param {Array<any>} arr
  * @param {Array<any>} items
  * @param {IComparator} comparator
