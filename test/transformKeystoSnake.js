@@ -38,4 +38,14 @@ describe('transformKeysToSnake', () => {
     }
     assert.deepEqual(transformKeysToSnake(input), output)
   })
+
+  it('should work with', () => {
+    const input = {
+      mixedArray: [123, { someKey: 'value' }, [{ nestedArrayItem: 'test' }]]
+    }
+    const output = {
+      mixed_array: [123, { some_key: 'value' }, [{ nested_array_item: 'test' }]]
+    }
+    assert.deepEqual(transformKeysToSnake(input), output)
+  })
 })

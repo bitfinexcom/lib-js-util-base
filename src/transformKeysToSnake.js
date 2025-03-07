@@ -10,6 +10,10 @@ const snakeCase = require('./snakeCase')
  * @returns {Object}
  */
 const transformKeysToSnakeCase = (obj) => {
+  if (Array.isArray(obj)) {
+    return obj.map(item => transformKeysToSnakeCase(item))
+  }
+
   if (!isPlainObject(obj)) {
     return obj
   }
