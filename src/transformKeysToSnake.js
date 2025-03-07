@@ -21,7 +21,7 @@ const transformKeysToSnakeCase = (obj) => {
   return Object.fromEntries(
     Object.entries(obj).map(([k, v]) => [
       snakeCase(k),
-      Array.isArray(v) ? v.map(transformKeysToSnakeCase) : transformKeysToSnakeCase(v)
+      transformKeysToSnakeCase(v)
     ])
   )
 }
