@@ -42,6 +42,7 @@ const shuffle = require('./src/shuffle')
 const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
+const transformKeysToSnake = require('./src/transformKeysToSnake')
 const union = require('./src/union')
 const uniqBy = require('./src/uniqBy')
 const uniqWith = require('./src/uniqWith')
@@ -93,6 +94,7 @@ module.exports = {
   snakeCase,
   sum,
   sumBy,
+  transformKeysToSnake,
   union,
   uniqBy,
   uniqWith,
