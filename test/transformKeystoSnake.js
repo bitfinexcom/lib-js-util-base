@@ -6,7 +6,7 @@ const assert = require('assert')
 const { transformKeysToSnake } = require('../index')
 const { itEach } = require('mocha-it-each')
 
-describe.only('transformKeysToSnake', () => {
+describe('transformKeysToSnake', () => {
   itEach('should return input when it is not an object', [new Date(), null, false], (input) => {
     assert.equal(transformKeysToSnake(input), input)
   })
