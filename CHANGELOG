@@ -1,3 +1,9 @@
+#1.20.0
+- fix: cloneDeep should not skip nonserializable entities
+- feat: add uniq
+- feat: add differenceWith
+- feat: add matches
+
 #1.19.1
 - fix: fix isPlainObject to check that the constructor is an object
 
