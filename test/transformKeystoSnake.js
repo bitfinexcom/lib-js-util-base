@@ -6,7 +6,7 @@ const assert = require('assert')
 const { transformKeysToSnake } = require('../index')
 const { itEach } = require('mocha-it-each')
 
-describe.only('transformKeysToSnake', () => {
+describe('transformKeysToSnake', () => {
   describe('non recursive (default)', () => {
     itEach('should return input when it is not an object', [new Date(), null, false], (input) => {
       assert.equal(transformKeysToSnake(input), input)
@@ -61,6 +61,9 @@ describe.only('transformKeysToSnake', () => {
         nestedProp: {
           first_name: 'john',
           lastName: 'doe',
+          level2: {
+            fooBar: 'x'
+          },
           tags: ['keepCamel']
         },
         someObjs: [
@@ -73,6 +76,9 @@ describe.only('transformKeysToSnake', () => {
         nested_prop: {
           first_name: 'john',
           last_name: 'doe',
+          level2: {
+            foo_bar: 'x'
+          },
           tags: ['keepCamel']
         },
         some_objs: [

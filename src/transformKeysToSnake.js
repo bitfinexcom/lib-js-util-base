@@ -7,11 +7,13 @@ const snakeCase = require('./snakeCase')
  * Transform object keys to snake case
  * e.g. { fooBar: 1 } => { foo_bar: 1 }
  * @param {Object} obj
+ * @param {Object} [opts]
+ * @param {boolean} [opts.recursive]
  * @returns {Object}
  */
-const transformKeysToSnake = (obj, { recursive } = {}) => {
+const transformKeysToSnake = (obj, opts) => {
   if (Array.isArray(obj)) {
-    return obj.map(item => transformKeysToSnake(item))
+    return obj.map(item => transformKeysToSnake(item, opts))
   }
 
   if (!isPlainObject(obj)) {
@@ -21,7 +23,7 @@ const transformKeysToSnake = (obj, { recursive } = {}) => {
   return Object.fromEntries(
     Object.entries(obj).map(([k, v]) => [
       snakeCase(k),
-      recursive ? transformKeysToSnake(v) : v
+      opts?.recursive ? transformKeysToSnake(v, opts) : v
     ])
   )
 }
