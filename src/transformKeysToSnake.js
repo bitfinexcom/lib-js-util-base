@@ -9,9 +9,9 @@ const snakeCase = require('./snakeCase')
  * @param {Object} obj
  * @returns {Object}
  */
-const transformKeysToSnakeCase = (obj) => {
+const transformKeysToSnake = (obj, { recursive } = {}) => {
   if (Array.isArray(obj)) {
-    return obj.map(item => transformKeysToSnakeCase(item))
+    return obj.map(item => transformKeysToSnake(item))
   }
 
   if (!isPlainObject(obj)) {
@@ -21,9 +21,9 @@ const transformKeysToSnakeCase = (obj) => {
   return Object.fromEntries(
     Object.entries(obj).map(([k, v]) => [
       snakeCase(k),
-      transformKeysToSnakeCase(v)
+      recursive ? transformKeysToSnake(v) : v
     ])
   )
 }
 
-module.exports = transformKeysToSnakeCase
+module.exports = transformKeysToSnake

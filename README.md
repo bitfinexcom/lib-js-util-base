@@ -44,7 +44,7 @@ Currently supported utils:
 - `snakeCase` - convert camel case and string/dash separated strings to snake case
 - `sum` - calculate sum of array items
 - `sumBy` - calculate sum of array items using iteratee function or string shortcut
-- `transformKeysToSnake` - transform every object key to snake case
+- `transformKeysToSnake` - transform every object key to snake case with option to be recursive
 - `union` - Returns the union of the given arrays
 - `uniqBy` - get unique values of array by the iteratee function or property path
 - `uniqWith` - Returns a new array with unique values, using a comparator function

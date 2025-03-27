@@ -40,7 +40,7 @@ export function shuffle<T> (array: Array<T>): Array<T>
 export function snakeCase (str: string): string
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
-export function transformKeysToSnake (obj: Object) : Object
+export function transformKeysToSnake (obj: Object, opts?: {recursive?: boolean}) : Object
 export function union (...arrays: Array[]): Array
 export function uniqBy (array: Array, iteratee: Function | string): Array
 export function uniqWith (array: Array, comparator: Function): Array
