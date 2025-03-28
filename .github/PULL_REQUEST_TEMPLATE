@@ -11,7 +11,7 @@
 - [ ]
 
 ### PR status:
-- [ ] Version bumped
+- [ ] Version bumped in package.json and package-lock.json
 - [ ] Change-log updated
 - [ ] Tests added or updated
 - [ ] PR keeps 100% test coverage
@@ -20,3 +20,4 @@
 - [ ] Linter is applied
 - [ ] Const arrow functions are used instead of pure function definitions where applicable
 - [ ] Functions are listed in alphabetic order in index.js, index.d.ts and readme
+- [ ] NPM audit reports no issues

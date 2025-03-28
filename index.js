@@ -38,6 +38,7 @@ const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
 const resolvePromiseCb = require('./src/resolvePromiseCb')
+const sample = require('./src/sample')
 const shuffle = require('./src/shuffle')
 const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
@@ -90,6 +91,7 @@ module.exports = {
   pick,
   pickBy,
   resolvePromiseCb,
+  sample,
   shuffle,
   snakeCase,
   sum,
