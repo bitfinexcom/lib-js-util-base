@@ -40,10 +40,12 @@ const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
 const resolvePromiseCb = require('./src/resolvePromiseCb')
+const sample = require('./src/sample')
 const shuffle = require('./src/shuffle')
 const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
+const transformKeysToSnake = require('./src/transformKeysToSnake')
 const union = require('./src/union')
 const uniq = require('./src/uniq')
 const uniqBy = require('./src/uniqBy')
@@ -94,10 +96,12 @@ module.exports = {
   pick,
   pickBy,
   resolvePromiseCb,
+  sample,
   shuffle,
   snakeCase,
   sum,
   sumBy,
+  transformKeysToSnake,
   union,
   uniq,
   uniqBy,

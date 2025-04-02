@@ -38,10 +38,12 @@ export function omitBy (obj: Object, predicate: (val: any, key: string) => boole
 export function pick (obj: Object, keys: Array<string>): Object
 export function pickBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function resolvePromiseCb<T> (err: any, res: T, cb: (err: any, res: T) => void): Promise<T>|void
+export function sample<T> (list: Array<T>|Object<string, T>): T
 export function shuffle<T> (array: Array<T>): Array<T>
 export function snakeCase (str: string): string
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
+export function transformKeysToSnake (obj: Object, opts?: {recursive?: boolean}) : Object
 export function union (...arrays: Array[]): Array
 export function uniq (array: Array): Array
 export function uniqBy (array: Array, iteratee: Function | string): Array

@@ -54,4 +54,18 @@ describe('unset', () => {
     async ([obj, path]) => {
       assert.strictEqual(unset(obj, path), false)
     })
+
+  it('should return false when delete throws an error', () => {
+    const throwingProxy = new Proxy({ a: 123 }, {
+      deleteProperty (target, prop) {
+        if (prop === 'a') {
+          throw new Error('Forced delete error')
+        }
+        return true
+      }
+    })
+
+    const result = unset(throwingProxy, 'a')
+    assert.strictEqual(result, false)
+  })
 })
