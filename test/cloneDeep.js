@@ -35,4 +35,40 @@ describe('cloneDeep', () => {
       assert.deepStrictEqual(obj, clone)
     }
   })
+
+  it('should deep clone objects with regular expressions', () => {
+    const obj = { foo: /a/ }
+    const clone = cloneDeep(obj)
+    assert.deepEqual(obj.foo, clone.foo)
+    assert.notStrictEqual(obj.foo, clone.foo)
+  })
+
+  it('should deep clone objects with dates', () => {
+    const obj = { foo: new Date() }
+    const clone = cloneDeep(obj)
+    assert.deepEqual(obj.foo, clone.foo)
+    assert.notStrictEqual(obj.foo, clone.foo)
+  })
+
+  it('should deep clone objects with maps', () => {
+    const obj = { foo: new Map() }
+    const clone = cloneDeep(obj)
+    assert.deepEqual(obj.foo, clone.foo)
+    assert.notStrictEqual(obj.foo, clone.foo)
+  })
+
+  it('should deep clone objects with sets', () => {
+    const obj = { foo: new Set() }
+    const clone = cloneDeep(obj)
+    assert.deepEqual(obj.foo, clone.foo)
+    assert.notStrictEqual(obj.foo, clone.foo)
+  })
+
+  it('should deep clone objects with circular references', () => {
+    const obj = { foo: { bar: { baz: { } } } }
+    obj.foo.bar.baz.qux = obj
+    const clone = cloneDeep(obj)
+    assert.deepEqual(obj.foo.bar.baz.qux, clone.foo.bar.baz.qux)
+    assert.notStrictEqual(obj.foo.bar.baz.qux, clone.foo.bar.baz.qux)
+  })
 })

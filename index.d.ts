@@ -4,6 +4,7 @@ export function capitalize (str: string): string
 export function clone (obj: Object): Object
 export function cloneDeep (obj: Object): Object
 export function difference (array: Array<any>, values: Array<any>): Array<any>
+export function differenceWith (array: Array<any>, items: Array<any>, comparator: Function): Array<any>
 export function findLastIndex (array: Array<any>, predicate: Function): number
 export function flow (funcs: Array<Function>): Function
 export function freezeDeep (obj: Object): Object
@@ -27,6 +28,7 @@ export function isString (val: any): boolean
 export function isUndefined (val: any): boolean
 export function mapKeys(obj: Object, mapper: (val: any, key: string) => string): Object
 export function mapValues(obj: Object, mapper: (val: any, key: string) => any): Object
+export function matches(src: Object): (obj: Object) => boolean
 export function max (array: Array<any>): any
 export function mean (values: Array<number>): number
 export function merge (obj: Object, ...sources: Object[]): Object
@@ -43,8 +45,10 @@ export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
 export function transformKeysToSnake (obj: Object, opts?: {recursive?: boolean}) : Object
 export function union (...arrays: Array[]): Array
+export function uniq (array: Array): Array
 export function uniqBy (array: Array, iteratee: Function | string): Array
 export function uniqWith (array: Array, comparator: Function): Array
+export function unset(object: Object, path: string | Array<string | number>): boolean
 export function update (obj: Object, path: string | Array<string | number>, updater: Function): Object
 export function validateInput ( input: string, format: 'NUMBER' | 'EMAIL' | 'PATH' | 'NAME' | 'NAME_WITH_DIGITS' | 'INPUT' | 'ADDRESS' | 'PHONE_CODE' | 'PHONE' | 'IMAGE' | 'FILE' | 'FILENAME' | 'PASSWORD' | 'URL' ): Boolean
 export function without (array: Array, ...values: Array): Array
