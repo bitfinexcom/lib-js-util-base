@@ -6,6 +6,7 @@ Currently supported utils:
 - `assignWith` - Assigns the object properties from the sources
 - `camelize` - simple camel case
 - `capitalize` - make first char uppercase
+- `chunk` - chunk an array into chunks
 - `clone` - Shallow clone the object
 - `cloneDeep` - deep clone functionality for objects
 - `difference` - creates an array of values from the first argument not included in the second argument

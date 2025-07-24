@@ -3,6 +3,7 @@
 const assignInWith = require('./src/assignWith')
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
+const chunk = require('./src/chunk')
 const clone = require('./src/clone')
 const cloneDeep = require('./src/cloneDeep')
 const difference = require('./src/difference')
@@ -56,6 +57,7 @@ module.exports = {
   assignInWith,
   camelize,
   capitalize,
+  chunk,
   clone,
   cloneDeep,
   difference,
