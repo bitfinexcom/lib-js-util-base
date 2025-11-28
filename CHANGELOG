@@ -1,5 +1,7 @@
-#1.21.0
+#1.22.0
 - feat: add chunk
+
+#1.21.0
 - fix: cloneDeep should not skip nonserializable entities
 - feat: add uniq
 - feat: add differenceWith
