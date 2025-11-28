@@ -1,5 +1,9 @@
 #1.21.0
 - feat: add chunk
+- fix: cloneDeep should not skip nonserializable entities
+- feat: add uniq
+- feat: add differenceWith
+- feat: add matches
 
 #1.20.0
 - feat: add transformKeysToSnake

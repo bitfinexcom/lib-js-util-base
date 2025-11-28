@@ -7,6 +7,7 @@ const chunk = require('./src/chunk')
 const clone = require('./src/clone')
 const cloneDeep = require('./src/cloneDeep')
 const difference = require('./src/difference')
+const differenceWith = require('./src/differenceWith')
 const findLastIndex = require('./src/findLastIndex')
 const flow = require('./src/flow')
 const freezeDeep = require('./src/freezeDeep')
@@ -14,8 +15,8 @@ const get = require('./src/get')
 const getArrayHasIntersect = require('./src/getArrayHasIntersect')
 const getArrayUniq = require('./src/getArrayUniq')
 const getErrorMessage = require('./src/getErrorMessage')
-const invert = require('./src/invert')
 const groupBy = require('./src/groupBy')
+const invert = require('./src/invert')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
 const isFinite = require('./src/isFinite')
@@ -30,6 +31,7 @@ const isString = require('./src/isString')
 const isUndefined = require('./src/isUndefined')
 const mapKeys = require('./src/mapKeys')
 const mapValues = require('./src/mapValues')
+const matches = require('./src/matches')
 const max = require('./src/max')
 const mean = require('./src/mean')
 const merge = require('./src/merge')
@@ -46,12 +48,13 @@ const sum = require('./src/sum')
 const sumBy = require('./src/sumBy')
 const transformKeysToSnake = require('./src/transformKeysToSnake')
 const union = require('./src/union')
+const uniq = require('./src/uniq')
 const uniqBy = require('./src/uniqBy')
 const uniqWith = require('./src/uniqWith')
+const unset = require('./src/unset')
 const update = require('./src/update')
 const validateInput = require('./src/validateInput')
 const without = require('./src/without')
-const unset = require('./src/unset')
 
 module.exports = {
   assignInWith,
@@ -61,6 +64,7 @@ module.exports = {
   clone,
   cloneDeep,
   difference,
+  differenceWith,
   findLastIndex,
   flow,
   freezeDeep,
@@ -68,8 +72,8 @@ module.exports = {
   getArrayHasIntersect,
   getArrayUniq,
   getErrorMessage,
-  invert,
   groupBy,
+  invert,
   isEmpty,
   isEqual,
   isFinite,
@@ -84,6 +88,7 @@ module.exports = {
   isUndefined,
   mapKeys,
   mapValues,
+  matches,
   max,
   mean,
   merge,
@@ -100,10 +105,11 @@ module.exports = {
   sumBy,
   transformKeysToSnake,
   union,
+  uniq,
   uniqBy,
   uniqWith,
+  unset,
   update,
   validateInput,
-  without,
-  unset
+  without
 }

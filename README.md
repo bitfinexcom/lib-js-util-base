@@ -10,6 +10,7 @@ Currently supported utils:
 - `clone` - Shallow clone the object
 - `cloneDeep` - deep clone functionality for objects
 - `difference` - creates an array of values from the first argument not included in the second argument
+- `differenceWith` - creates an array of values from the first argument not included in the second one using comparator function
 - `findLastIndex` - Returns the index of the last element in the array that satisfies the provided testing function.
 - `flow` - generate a composite function that returns the result of provided functions called by the chain; each previous function result passes as the argument of the next function in the chain
 - `freezeDeep` - deep freezes objects
@@ -32,6 +33,7 @@ Currently supported utils:
 - `isUndefined` - checks if an input is undefined
 - `mapKeys` - creates new object with the same values but with keys mapped by the provided function
 - `mapValues` - Maps the values of an object or array using the provided iteratee function or property path
+- `matches` - creates a function that makes a deep partial comparison on a given object with the source
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
 - `mean` - Returns the mean of an array of numbers
 - `merge` - deep merge functionality for objects
@@ -48,8 +50,10 @@ Currently supported utils:
 - `sumBy` - calculate sum of array items using iteratee function or string shortcut
 - `transformKeysToSnake` - transform every object key to snake case with option to be recursive
 - `union` - Returns the union of the given arrays
+- `uniq` - Returns unique values of the array
 - `uniqBy` - get unique values of array by the iteratee function or property path
 - `uniqWith` - Returns a new array with unique values, using a comparator function
+- `unset` - Remove a property by the path in any depth, returns true if succeed, false otherwise
 - `update` - Update the object with the updater by path
 - `validateInput` - validates the input based on the regex format options: `NUMBER | EMAIL | PATH | NAME | NAME_WITH_DIGITS | INPUT | ADDRESS | PHONE_CODE | PHONE | IMAGE | FILE | FILENAME | PASSWORD`
 - `without` - creates an array of values from the first argument excluding all given arguments
