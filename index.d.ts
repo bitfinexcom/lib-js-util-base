@@ -1,3 +1,5 @@
+export type PartialObject<T> = { [P in keyof T]?: T[P] | undefined; }
+
 export function assignInWith (obj: Object, ...sources: Object[]): Object
 export function camelCase (str: string): string
 export function camelize (str: string): string
