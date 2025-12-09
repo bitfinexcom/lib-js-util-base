@@ -7,7 +7,8 @@
  * @returns {Array<Array>}
  */
 const chunk = (collection = [], chunkSize = 1) => {
-  const sizeInt = Math.max(1, chunkSize)
+  if (!Array.isArray(collection) || collection.length === 0) return []
+  const sizeInt = Math.floor(Math.max(1, chunkSize))
   const result = []
 
   for (let i = 0; i < collection.length; i += sizeInt) {

@@ -1,7 +1,6 @@
 'use strict'
 
 const assignInWith = require('./src/assignWith')
-const camelCase = require('./src/camelCase')
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
 const chunk = require('./src/chunk')
@@ -81,7 +80,6 @@ const without = require('./src/without')
 
 module.exports = {
   assignInWith,
-  camelCase,
   camelize,
   capitalize,
   chunk,

@@ -21,4 +21,9 @@ describe('endsWith', () => {
   it('should handle non-string input', () => {
     assert.strictEqual(endsWith(123, '3'), true)
   })
+
+  it('should respect position argument', () => {
+    assert.strictEqual(endsWith('abcde', 'c', 3), true)
+    assert.strictEqual(endsWith('abcde', 'de', 4), false)
+  })
 })

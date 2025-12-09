@@ -1,7 +1,6 @@
 export type PartialObject<T> = { [P in keyof T]?: T[P] | undefined; }
 
 export function assignInWith (obj: Object, ...sources: Object[]): Object
-export function camelCase (str: string): string
 export function camelize (str: string): string
 export function capitalize (str: string): string
 export function chunk<T> (collection: Array<T>, chunkSize?: number): Array<Array<T>>
@@ -10,7 +9,7 @@ export function cloneDeep (obj: Object): Object
 export function difference (array: Array<any>, values: Array<any>): Array<any>
 export function differenceWith (array: Array<any>, items: Array<any>, comparator: Function): Array<any>
 export function each<T> (collection: Array<T> | Object, iteratee: (value: T, index?: number | string) => void): Array<T> | Object
-export function endsWith (str: string, suffix: string): boolean
+export function endsWith (str: string, suffix: string, position?: number): boolean
 export function every<T> (collection: Array<T>, predicate: (value: T) => boolean): boolean
 export function filter<T> (collection: Array<T>, predicate: (value: T) => boolean): Array<T>
 export function find<T> (collection: Array<T>, predicate: (value: T) => boolean): T | undefined
@@ -50,7 +49,7 @@ export function mean (values: Array<number>): number
 export function merge (obj: Object, ...sources: Object[]): Object
 export function min (array: Array<any>): any
 export function minBy<T> (collection: Array<T>, iteratee: Function | string): T | undefined
-export function omit (obj: Object, keys: Array<string>): Object
+export function omit (obj: Object, keys: Array<string | Array<string | number>>): Object
 export function omitBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function pick (obj: Object, keys: Array<string>): Object
 export function pickBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
