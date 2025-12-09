@@ -8,14 +8,7 @@ export function clone (obj: Object): Object
 export function cloneDeep (obj: Object): Object
 export function difference (array: Array<any>, values: Array<any>): Array<any>
 export function differenceWith (array: Array<any>, items: Array<any>, comparator: Function): Array<any>
-export function each<T> (collection: Array<T> | Object, iteratee: (value: T, index?: number | string) => void): Array<T> | Object
-export function endsWith (str: string, suffix: string, position?: number): boolean
-export function every<T> (collection: Array<T>, predicate: (value: T) => boolean): boolean
-export function filter<T> (collection: Array<T>, predicate: (value: T) => boolean): Array<T>
-export function find<T> (collection: Array<T>, predicate: (value: T) => boolean): T | undefined
 export function findLastIndex (array: Array<any>, predicate: Function): number
-export function flatMap<T, U> (collection: Array<T>, iteratee: (value: T) => U | Array<U>): Array<U>
-export function flatten<T> (collection: Array<T | Array<T>>): Array<T>
 export function flow (funcs: Array<Function>): Function
 export function freezeDeep (obj: Object): Object
 export function get (obj: Object, path: string | Array<string | number>, defaultValue: any): any
@@ -23,7 +16,6 @@ export function getArrayHasIntersect (arr1: Array<any>, arr2: Array<any>): boole
 export function getArrayUniq (arr: Array<any>): Array<any>
 export function getErrorMessage (obj: obj): string
 export function groupBy<T> (array: Array<T>, key: string | ((item: T) => string)): { [key: string]: Array<T> }
-export function includes (collection: Array<any> | Object | string, value: any): boolean
 export function invert (obj: Object): Object
 export function isBoolean (value: any): boolean
 export function isEmpty (val: any): boolean
@@ -38,8 +30,6 @@ export function isObjectLike(value: any): boolean
 export function isPlainObject (val: any): boolean
 export function isString (val: any): boolean
 export function isUndefined (val: any): boolean
-export function keys (obj: Object): Array<string>
-export function map<T, U> (collection: Array<T>, iteratee: (value: T) => U): Array<U>
 export function mapKeys(obj: Object, mapper: (val: any, key: string) => string): Object
 export function mapValues(obj: Object, mapper: (val: any, key: string) => any): Object
 export function matches(src: Object): (obj: Object) => boolean
@@ -53,20 +43,14 @@ export function omit (obj: Object, keys: Array<string | Array<string | number>>)
 export function omitBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function pick (obj: Object, keys: Array<string>): Object
 export function pickBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
-export function reduce<T, U> (collection: Array<T> | Object, iteratee: (acc: U, value: T, index?: number | string) => U, accumulator: U): U
 export function resolvePromiseCb<T> (err: any, res: T, cb: (err: any, res: T) => void): Promise<T>|void
 export function sample<T> (list: Array<T>|Object<string, T>): T
 export function set (obj: Object, path: string | Array<string | number>, value: any): Object
 export function shuffle<T> (array: Array<T>): Array<T>
-export function size (value: Array<any> | Object | string): number
-export function slice<T> (value: Array<T> | string, ...args: number[]): Array<T> | string
 export function snakeCase (str: string): string
-export function split (str: string, separator: string, limit?: number): Array<string>
-export function startsWith (str: string, prefix: string): boolean
 export function sum (values: Array<string>): number
 export function sumBy (values: Array, iteratee: Function | string): number
 export function transformKeysToSnake (obj: Object, opts?: {recursive?: boolean}) : Object
-export function trim (str: string): string
 export function union (...arrays: Array[]): Array
 export function uniq (array: Array): Array
 export function uniqBy (array: Array, iteratee: Function | string): Array
@@ -75,5 +59,4 @@ export function unset(object: Object, path: string | Array<string | number>): bo
 export function update (obj: Object, path: string | Array<string | number>, updater: Function): Object
 export function upperFirst (str: string): string
 export function validateInput ( input: string, format: 'NUMBER' | 'EMAIL' | 'PATH' | 'NAME' | 'NAME_WITH_DIGITS' | 'INPUT' | 'ADDRESS' | 'PHONE_CODE' | 'PHONE' | 'IMAGE' | 'FILE' | 'FILENAME' | 'PASSWORD' | 'URL' ): Boolean
-export function values<T> (obj: Object): Array<T>
 export function without (array: Array, ...values: Array): Array
