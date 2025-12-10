@@ -10,13 +10,15 @@ const toPath = require('./util/toPath')
  * @returns {Object}
  */
 const set = (obj, path, value) => {
+  if (!obj) return obj
   const segments = toPath(path)
   let current = obj
 
+  const lastIndex = segments.length - 1
   for (let i = 0; i < segments.length; i++) {
     const key = segments[i]
 
-    if (i === segments.length - 1) {
+    if (i === lastIndex) {
       current[key] = value
       return obj
     }

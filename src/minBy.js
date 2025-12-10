@@ -1,16 +1,6 @@
 'use strict'
 
-const get = require('./get')
-
-/**
- * Gets the value for a given iteratee
- * @param {Function | string} iteratee
- * @returns {Function}
- */
-const getterFor = (iteratee) => {
-  if (typeof iteratee === 'function') return iteratee
-  return (item) => get(item, iteratee)
-}
+const getterFor = require('./util/getterFor')
 
 /**
  * Gets the minimum value from a collection by iteratee
@@ -20,11 +10,19 @@ const getterFor = (iteratee) => {
  */
 const minBy = (collection = [], iteratee) => {
   const getValue = getterFor(iteratee)
+  let minItem, minValue
 
-  return collection.reduce((result, item) => {
-    if (result === undefined) return item
-    return getValue(item) < getValue(result) ? item : result
-  }, undefined)
+  for (let i = 0; i < collection.length; i++) {
+    const item = collection[i]
+    const value = getValue(item)
+
+    if (minItem === undefined || value < minValue) {
+      minItem = item
+      minValue = value
+    }
+  }
+
+  return minItem
 }
 
 module.exports = minBy

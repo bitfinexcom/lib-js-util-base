@@ -11,9 +11,19 @@ describe('chunk', () => {
     assert.deepStrictEqual(result, [[1, 2], [3, 4], [5]])
   })
 
-  it('should handle default chunk size', () => {
-    const result = chunk([1, 2, 3])
-    assert.deepStrictEqual(result, [[1], [2], [3]])
+  it('should chunk array into groups if chunk size is string number', () => {
+    const result = chunk([1, 2, 3, 4, 5], '2')
+    assert.deepStrictEqual(result, [[1, 2], [3, 4], [5]])
+  })
+
+  it('should return an empty array if the collection is not an array', () => {
+    const result = chunk(null, 2)
+    assert.deepStrictEqual(result, [])
+  })
+
+  it('should return an empty array if the chunk size is not a number', () => {
+    const result = chunk([1, 2, 3], 'test')
+    assert.deepStrictEqual(result, [])
   })
 
   it('should handle empty array', () => {

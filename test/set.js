@@ -6,6 +6,12 @@ const assert = require('assert')
 const set = require('../src/set')
 
 describe('set', () => {
+  it('should return the same value if obj is null or undefined', () => {
+    const obj = null
+    const result = set(obj, 'a', 'foo')
+    assert.strictEqual(result, null)
+  })
+
   it('should set value at path', () => {
     const obj = {}
     const result = set(obj, 'a', 'foo')

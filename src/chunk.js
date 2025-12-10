@@ -7,7 +7,7 @@
  * @returns {Array<Array>}
  */
 const chunk = (collection = [], chunkSize = 1) => {
-  if (!Array.isArray(collection) || collection.length === 0) return []
+  if (!Array.isArray(collection) || collection.length === 0 || Number.isNaN(Number(chunkSize))) return []
   const sizeInt = Math.floor(Math.max(1, chunkSize))
   const result = []
 

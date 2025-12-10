@@ -1,16 +1,6 @@
 'use strict'
 
-const get = require('./get')
-
-/**
- * Gets the value for a given iteratee
- * @param {Function | string} iteratee
- * @returns {Function}
- */
-const getterFor = (iteratee) => {
-  if (typeof iteratee === 'function') return iteratee
-  return (item) => get(item, iteratee)
-}
+const getterFor = require('./util/getterFor')
 
 /**
  * Gets the maximum value from a collection by iteratee
@@ -21,10 +11,19 @@ const getterFor = (iteratee) => {
 const maxBy = (collection = [], iteratee) => {
   const getValue = getterFor(iteratee)
 
-  return collection.reduce((result, item) => {
-    if (result === undefined) return item
-    return getValue(item) > getValue(result) ? item : result
-  }, undefined)
+  let maxItem, maxValue
+
+  for (let i = 0; i < collection.length; i++) {
+    const item = collection[i]
+    const value = getValue(item)
+
+    if (maxItem === undefined || value > maxValue) {
+      maxItem = item
+      maxValue = value
+    }
+  }
+
+  return maxItem
 }
 
 module.exports = maxBy
