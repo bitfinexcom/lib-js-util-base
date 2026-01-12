@@ -1,3 +1,14 @@
+#1.22.0
+- feat: add chunk - splits array into chunks of specified size
+- feat: add isBoolean - checks if value is a boolean
+- feat: add maxBy - gets the maximum value from a collection by iteratee
+- feat: add minBy - gets the minimum value from a collection by iteratee
+- feat: add set - sets the value at path of object
+- feat: add upperFirst - converts the first character of string to upper case
+- feat: add PartialObject TypeScript utility type
+- feat: enhance omit to support nested object paths (dot and bracket notation)
+- fix: omit now properly handles nested object structures without mutating the original object
+
 #1.21.0
 - fix: cloneDeep should not skip nonserializable entities
 - feat: add uniq
