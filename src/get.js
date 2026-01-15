@@ -1,6 +1,6 @@
 'use strict'
 
-const pathToArray = require('./util/pathToArray')
+const toPath = require('./util/toPath')
 
 /**
  *
@@ -35,7 +35,7 @@ const get = (object, path, defaults) => {
     return object[path]
   }
 
-  return getDeeperProp(object, pathToArray(path), defaults)
+  return getDeeperProp(object, toPath(path), defaults)
 }
 
 module.exports = get

@@ -1,6 +1,6 @@
 'use strict'
 
-const pathToArray = require('./util/pathToArray')
+const toPath = require('./util/toPath')
 
 /**
  * Sets the value at path of object
@@ -11,7 +11,7 @@ const pathToArray = require('./util/pathToArray')
  */
 const set = (obj, path, value) => {
   if (!obj) return obj
-  const segments = pathToArray(path)
+  const segments = toPath(path)
   let current = obj
 
   const lastIndex = segments.length - 1
