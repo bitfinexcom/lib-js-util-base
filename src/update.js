@@ -1,6 +1,6 @@
 'use strict'
 
-const pathToArray = require('./util/pathToArray')
+const toPath = require('./util/toPath')
 
 /**
  * Update the object with the updater by path
@@ -13,7 +13,7 @@ const update = (object, path, updater) => {
   if (!object) return
   if (!path) return
   if (!updater) return
-  const pathArray = pathToArray(path)
+  const pathArray = toPath(path)
   pathArray.reduce((parent, key, index) => {
     if (index === pathArray.length - 1) {
       parent[key] = updater(parent[key])

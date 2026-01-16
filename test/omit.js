@@ -29,4 +29,30 @@ describe('omit', () => {
   it('should handle keys that are not strings', () => {
     assert.deepStrictEqual(omit({ 1: 'one', 2: 'two' }, ['1']), { 2: 'two' })
   })
+
+  it('should omit nested paths using dot/bracket notation', () => {
+    const input = { user: { name: { first: 'Abdelrahman', last: 'Solyman' }, age: 30 } }
+    const expected = { user: { name: { last: 'Solyman' }, age: 30 } }
+    assert.deepStrictEqual(omit(input, ['user.name.first']), expected)
+    assert.deepStrictEqual(omit(input, ['user[name][last]']), { user: { name: { first: 'Abdelrahman' }, age: 30 } })
+  })
+
+  it('should not mutate the original object', () => {
+    const input = { user: { name: { first: 'Abdelrahman' } } }
+    const copy = JSON.parse(JSON.stringify(input))
+    omit(input, ['user.name.first'])
+    assert.deepStrictEqual(input, copy)
+  })
+
+  it('should handle non-array keys parameter', () => {
+    const input = { a: 1, b: 2, c: 3 }
+    const result = omit(input, 'a')
+    assert.deepStrictEqual(result, { a: 1, b: 2, c: 3 })
+  })
+
+  it('should handle undefined keys parameter', () => {
+    const input = { a: 1, b: 2, c: 3 }
+    const result = omit(input, undefined)
+    assert.deepStrictEqual(result, { a: 1, b: 2, c: 3 })
+  })
 })

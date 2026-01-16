@@ -1,6 +1,6 @@
 'use strict'
 
-const pathToArray = require('./util/pathToArray')
+const toPath = require('./util/toPath')
 const isEmpty = require('./isEmpty')
 const isPlainObject = require('./isPlainObject')
 const get = require('./get')
@@ -36,7 +36,7 @@ const _doUnset = (obj, path) => {
  * @returns {boolean} true if the path was found and deleted or did not exist, false otherwise
  */
 const unset = (object, path) => {
-  _doUnset(object, pathToArray(path))
+  _doUnset(object, toPath(path))
   return get(object, path, undefined) === undefined
 }
 

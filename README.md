@@ -6,6 +6,7 @@ Currently supported utils:
 - `assignWith` - Assigns the object properties from the sources
 - `camelize` - simple camel case
 - `capitalize` - make first char uppercase
+- `chunk` - splits array into chunks of specified size
 - `clone` - Shallow clone the object
 - `cloneDeep` - deep clone functionality for objects
 - `difference` - creates an array of values from the first argument not included in the second argument
@@ -18,6 +19,7 @@ Currently supported utils:
 - `getArrayUniq` - gets unique values form array
 - `invert` - Inverts the key-value pairs of an object
 - `groupBy` - groups the elements of an array by a specified key.
+- `isBoolean` - checks if value is a boolean
 - `isEmpty` - checks if value is an empty object, collection, map, or set
 - `isEqual` - check if passed two values are equal
 - `isFinite` - checks if input is a finite number.
@@ -34,15 +36,18 @@ Currently supported utils:
 - `mapValues` - Maps the values of an object or array using the provided iteratee function or property path
 - `matches` - creates a function that makes a deep partial comparison on a given object with the source
 - `max` - computes the maximum value of array. If array is empty or falsey, undefined is returned
+- `maxBy` - gets the maximum value from a collection by iteratee
 - `mean` - Returns the mean of an array of numbers
 - `merge` - deep merge functionality for objects
 - `min` - computes the minimum value of array. If array is empty or falsey, undefined is returned
-- `omit` - provides new object that omits only specific fields of source object
+- `minBy` - gets the minimum value from a collection by iteratee
+- `omit` - provides new object that omits only specific fields of source object (supports nested paths)
 - `omitBy` -  provides new object that omits only specific fields of source object depending on predicate function filter
 - `pick` - provides new object that picks only specific fields of source object
 - `pickBy` -  provides new object that picks only specific fields of source object depending on predicate function filter
 - `resolvePromiseCb` -  helper to add callback support to async functions
 - `sample` - returns pseudo random element on the collection
+- `set` - sets the value at path of object
 - `shuffle` - performs pseudo random shuffle on clone of the array
 - `snakeCase` - convert camel case and string/dash separated strings to snake case
 - `sum` - calculate sum of array items
@@ -54,5 +59,6 @@ Currently supported utils:
 - `uniqWith` - Returns a new array with unique values, using a comparator function
 - `unset` - Remove a property by the path in any depth, returns true if succeed, false otherwise
 - `update` - Update the object with the updater by path
-- `validateInput` - validates the input based on the regex format options: `NUMBER | EMAIL | PATH | NAME | NAME_WITH_DIGITS | INPUT | ADDRESS | PHONE_CODE | PHONE | IMAGE | FILE | FILENAME | PASSWORD`
+- `upperFirst` - converts the first character of string to upper case
+- `validateInput` - validates the input based on the regex format options: `NUMBER | EMAIL | PATH | NAME | NAME_WITH_DIGITS | INPUT | ADDRESS | PHONE_CODE | PHONE | IMAGE | FILE | FILENAME | PASSWORD | URL`
 - `without` - creates an array of values from the first argument excluding all given arguments

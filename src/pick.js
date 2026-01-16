@@ -1,7 +1,7 @@
 'use strict'
 
 const get = require('./get')
-const pathToArray = require('./util/pathToArray')
+const toPath = require('./util/toPath')
 
 /**
  *
@@ -31,7 +31,7 @@ const _setObjByPath = (nested, path, value) => {
  * @returns
  */
 const _pickByPath = (src, dest, path) => {
-  const pathArr = pathToArray(path)
+  const pathArr = toPath(path)
 
   const value = get(src, [...pathArr])
   if (value !== undefined) {

@@ -71,4 +71,60 @@ describe('cloneDeep', () => {
     assert.deepEqual(obj.foo.bar.baz.qux, clone.foo.bar.baz.qux)
     assert.notStrictEqual(obj.foo.bar.baz.qux, clone.foo.bar.baz.qux)
   })
+
+  it('should deep clone Map with non-primitive keys', () => {
+    const keyObj = { id: 1 }
+    const valueObj = { name: 'test' }
+    const map = new Map([[keyObj, valueObj]])
+    const clone = cloneDeep(map)
+    assert.notStrictEqual(map, clone)
+    const clonedKey = Array.from(clone.keys())[0]
+    const clonedValue = clone.get(clonedKey)
+    assert.notStrictEqual(keyObj, clonedKey)
+    assert.notStrictEqual(valueObj, clonedValue)
+    assert.deepStrictEqual(keyObj, clonedKey)
+    assert.deepStrictEqual(valueObj, clonedValue)
+  })
+
+  it('should deep clone Set with complex values', () => {
+    const obj1 = { id: 1 }
+    const obj2 = { id: 2 }
+    const set = new Set([obj1, obj2])
+    const clone = cloneDeep(set)
+    assert.notStrictEqual(set, clone)
+    const clonedValues = Array.from(clone)
+    assert.notStrictEqual(obj1, clonedValues[0])
+    assert.notStrictEqual(obj2, clonedValues[1])
+    assert.deepStrictEqual(obj1, clonedValues[0])
+    assert.deepStrictEqual(obj2, clonedValues[1])
+  })
+
+  it('should deep clone TypedArray', () => {
+    const buffer = new ArrayBuffer(16)
+    const uint8 = new Uint8Array(buffer)
+    uint8[0] = 42
+    const obj = { data: uint8 }
+    const clone = cloneDeep(obj)
+    assert.notStrictEqual(obj.data, clone.data)
+    assert.strictEqual(clone.data.constructor, Uint8Array)
+    assert.strictEqual(clone.data[0], 42)
+  })
+
+  it('should deep clone Buffer', () => {
+    const buffer = Buffer.from('hello')
+    const obj = { data: buffer }
+    const clone = cloneDeep(obj)
+    assert.notStrictEqual(obj.data, clone.data)
+    assert.strictEqual(Buffer.isBuffer(clone.data), true)
+    assert.strictEqual(clone.data.toString(), 'hello')
+  })
+
+  it('should handle DataView (should not clone as TypedArray)', () => {
+    const buffer = new ArrayBuffer(16)
+    const dataView = new DataView(buffer)
+    const obj = { data: dataView }
+    const clone = cloneDeep(obj)
+    assert.notStrictEqual(obj.data, clone.data)
+    assert.strictEqual(clone.data.constructor, DataView)
+  })
 })

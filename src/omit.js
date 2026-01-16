@@ -1,16 +1,18 @@
 'use strict'
 
+const cloneDeep = require('./cloneDeep')
+const unset = require('./unset')
+
 const omit = (obj, keys) => {
-  if (obj === null) {
+  if (obj === null || obj === undefined) {
     return {}
   }
 
-  const result = {}
+  const result = cloneDeep(obj)
+  const keyList = Array.isArray(keys) ? keys : []
 
-  for (const key in obj) {
-    if (!keys.includes(key)) {
-      result[key] = obj[key]
-    }
+  for (const key of keyList) {
+    unset(result, key)
   }
 
   return result

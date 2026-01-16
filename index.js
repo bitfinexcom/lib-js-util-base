@@ -3,6 +3,7 @@
 const assignInWith = require('./src/assignWith')
 const camelize = require('./src/camelize')
 const capitalize = require('./src/capitalize')
+const chunk = require('./src/chunk')
 const clone = require('./src/clone')
 const cloneDeep = require('./src/cloneDeep')
 const difference = require('./src/difference')
@@ -16,6 +17,7 @@ const getArrayUniq = require('./src/getArrayUniq')
 const getErrorMessage = require('./src/getErrorMessage')
 const groupBy = require('./src/groupBy')
 const invert = require('./src/invert')
+const isBoolean = require('./src/isBoolean')
 const isEmpty = require('./src/isEmpty')
 const isEqual = require('./src/isEqual')
 const isFinite = require('./src/isFinite')
@@ -32,15 +34,18 @@ const mapKeys = require('./src/mapKeys')
 const mapValues = require('./src/mapValues')
 const matches = require('./src/matches')
 const max = require('./src/max')
+const maxBy = require('./src/maxBy')
 const mean = require('./src/mean')
 const merge = require('./src/merge')
 const min = require('./src/min')
+const minBy = require('./src/minBy')
 const omit = require('./src/omit')
 const omitBy = require('./src/omitBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
 const resolvePromiseCb = require('./src/resolvePromiseCb')
 const sample = require('./src/sample')
+const set = require('./src/set')
 const shuffle = require('./src/shuffle')
 const snakeCase = require('./src/snakeCase')
 const sum = require('./src/sum')
@@ -52,6 +57,7 @@ const uniqBy = require('./src/uniqBy')
 const uniqWith = require('./src/uniqWith')
 const unset = require('./src/unset')
 const update = require('./src/update')
+const upperFirst = require('./src/upperFirst')
 const validateInput = require('./src/validateInput')
 const without = require('./src/without')
 
@@ -59,6 +65,7 @@ module.exports = {
   assignInWith,
   camelize,
   capitalize,
+  chunk,
   clone,
   cloneDeep,
   difference,
@@ -72,6 +79,7 @@ module.exports = {
   getErrorMessage,
   groupBy,
   invert,
+  isBoolean,
   isEmpty,
   isEqual,
   isFinite,
@@ -88,15 +96,18 @@ module.exports = {
   mapValues,
   matches,
   max,
+  maxBy,
   mean,
   merge,
   min,
+  minBy,
   omit,
   omitBy,
   pick,
   pickBy,
   resolvePromiseCb,
   sample,
+  set,
   shuffle,
   snakeCase,
   sum,
@@ -108,6 +119,7 @@ module.exports = {
   uniqWith,
   unset,
   update,
+  upperFirst,
   validateInput,
   without
 }
