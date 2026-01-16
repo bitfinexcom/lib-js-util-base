@@ -52,4 +52,33 @@ describe('assignInWith', () => {
     }
     assert.deepStrictEqual(assignInWith(object, source, customizer), { a: 1, b: 4, c: 3 })
   })
+
+  it('should handle falsy customizer values', () => {
+    const object = { a: 1 }
+    const source = { b: 2 }
+    assignInWith(object, source, false)
+    assert.deepStrictEqual(object, { a: 1 })
+    assignInWith(object, source, 0)
+    assert.deepStrictEqual(object, { a: 1 })
+    assignInWith(object, source, '')
+    assert.deepStrictEqual(object, { a: 1 })
+  })
+
+  it('should handle customizer returning undefined explicitly', () => {
+    const object = { a: 1 }
+    const source = { b: 2, c: 3 }
+    const customizer = (objValue, srcValue) => {
+      return srcValue === 2 ? undefined : srcValue
+    }
+    assignInWith(object, source, customizer)
+    assert.deepStrictEqual(object, { a: 1, b: 2, c: 3 })
+  })
+
+  it('should handle customizer that returns non-undefined value', () => {
+    const object = { a: 1 }
+    const source = { b: 2 }
+    const customizer = () => 'custom'
+    assignInWith(object, source, customizer)
+    assert.deepStrictEqual(object, { a: 1, b: 'custom' })
+  })
 })

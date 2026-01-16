@@ -14,7 +14,7 @@ const assignInWith = (object, ...rest) => {
   if (rest.length === 0) return object
   rest.forEach((source) => {
     for (const key in source) {
-      const value = customizer ? customizer(object[key], source[key], key, object, source) : undefined
+      const value = customizer(object[key], source[key], key, object, source)
       object[key] = value === undefined ? source[key] : value
     }
   })

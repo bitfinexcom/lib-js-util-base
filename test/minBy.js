@@ -28,4 +28,15 @@ describe('minBy', () => {
     const result = minBy(collection, 'n')
     assert.strictEqual(result.n, 1)
   })
+
+  it('should handle undefined iteratee', () => {
+    const collection = [{ n: 1 }, { n: 2 }, { n: 0 }]
+    const result = minBy(collection, undefined)
+    assert.strictEqual(result.n, 1)
+  })
+
+  it('should handle default collection parameter', () => {
+    const result = minBy(undefined, 'n')
+    assert.strictEqual(result, undefined)
+  })
 })

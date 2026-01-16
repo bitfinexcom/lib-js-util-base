@@ -43,4 +43,16 @@ describe('omit', () => {
     omit(input, ['user.name.first'])
     assert.deepStrictEqual(input, copy)
   })
+
+  it('should handle non-array keys parameter', () => {
+    const input = { a: 1, b: 2, c: 3 }
+    const result = omit(input, 'a')
+    assert.deepStrictEqual(result, { a: 1, b: 2, c: 3 })
+  })
+
+  it('should handle undefined keys parameter', () => {
+    const input = { a: 1, b: 2, c: 3 }
+    const result = omit(input, undefined)
+    assert.deepStrictEqual(result, { a: 1, b: 2, c: 3 })
+  })
 })

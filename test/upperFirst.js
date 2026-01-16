@@ -50,4 +50,16 @@ describe('upperFirst', () => {
   it('should handle Symbol input', () => {
     assert.strictEqual(upperFirst(Symbol('abc')), 'Symbol(abc)')
   })
+
+  it('should handle null input', () => {
+    assert.strictEqual(upperFirst(null), 'Null')
+  })
+
+  it('should handle undefined input', () => {
+    assert.strictEqual(upperFirst(undefined), '')
+  })
+
+  it('should handle NaN input', () => {
+    assert.strictEqual(upperFirst(NaN), 'NaN')
+  })
 })

@@ -28,4 +28,15 @@ describe('maxBy', () => {
     const result = maxBy(collection, 'n')
     assert.strictEqual(result.n, 1)
   })
+
+  it('should handle undefined iteratee', () => {
+    const collection = [{ n: 1 }, { n: 2 }, { n: 3 }]
+    const result = maxBy(collection, undefined)
+    assert.strictEqual(result.n, 1)
+  })
+
+  it('should handle default collection parameter', () => {
+    const result = maxBy(undefined, 'n')
+    assert.strictEqual(result, undefined)
+  })
 })

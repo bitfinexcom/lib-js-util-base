@@ -40,4 +40,14 @@ describe('chunk', () => {
     const result = chunk([1, 2, 3], 0)
     assert.deepStrictEqual(result, [[1], [2], [3]])
   })
+
+  it('should handle default chunkSize parameter', () => {
+    const result = chunk([1, 2, 3])
+    assert.deepStrictEqual(result, [[1], [2], [3]])
+  })
+
+  it('should handle default collection parameter', () => {
+    const result = chunk(undefined, 2)
+    assert.deepStrictEqual(result, [])
+  })
 })
