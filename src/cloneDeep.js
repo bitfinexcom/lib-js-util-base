@@ -27,7 +27,9 @@ const cloneDeep = (obj, clones = new WeakMap()) => {
     })
     return newSet
   }
-  if (Buffer.isBuffer(obj)) return Buffer.from(obj)
+  if (typeof Buffer === 'function' && Buffer.isBuffer(obj)) {
+    return Buffer.from(obj)
+  }
   if (ArrayBuffer.isView(obj) && !(obj instanceof DataView)) {
     return new obj.constructor(obj)
   }
