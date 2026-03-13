@@ -1,3 +1,6 @@
+#2.0.1
+- fix: fix cloneDeep to consider that Buffer is not available in the browser engine
+
 #1.22.0
 - feat: add chunk - splits array into chunks of specified size
 - feat: add isBoolean - checks if value is a boolean
