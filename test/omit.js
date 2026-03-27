@@ -55,4 +55,10 @@ describe('omit', () => {
     const result = omit(input, undefined)
     assert.deepStrictEqual(result, { a: 1, b: 2, c: 3 })
   })
+
+  it('should handle if value is undefined but exists', () => {
+    const input = { a: undefined, b: 2, c: 3 }
+    const result = omit(input, ['a'])
+    assert.deepStrictEqual(result, { b: 2, c: 3 })
+  })
 })
