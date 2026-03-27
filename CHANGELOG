@@ -1,3 +1,6 @@
+#2.0.2
+- fix: fix unset and omit to handle that if prop value of obj is undefined but exists
+
 #2.0.1
 - fix: fix cloneDeep to consider that Buffer is not available in the browser engine
 

@@ -8,7 +8,7 @@ const get = require('./get')
 const _doUnset = (obj, path) => {
   const level = path.length - 1
   const key = path.shift()
-  if (obj[key] !== undefined) {
+  if (Object.hasOwn(obj, key)) {
     if (level > 0) _doUnset(obj[key], path)
     if (level === 0 || ((isPlainObject(obj[key]) || Array.isArray(obj[key])) && isEmpty(obj[key]))) {
       try {
