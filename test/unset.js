@@ -13,6 +13,7 @@ describe('unset', () => {
       [{ a: ['foo', 'bar'] }, 'a[1]', { a: ['foo'] }],
       [{ a: 'foo', b: [{ a: 'bar', c: 'baz' }] }, 'b[0].a', { a: 'foo', b: [{ c: 'baz' }] }],
       [{ b: null }, 'b', {}],
+      [{ b: undefined }, 'b', {}],
       [{ d: 0 }, 'd', {}],
       [{ a: 'bar', b: { a: 'foo' } }, 'b.a', { a: 'bar' }],
       [{ a: 'bar', b: { a: 'foo', c: 'baz' } }, 'b.a', { a: 'bar', b: { c: 'baz' } }],
