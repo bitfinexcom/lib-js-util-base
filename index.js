@@ -41,6 +41,7 @@ const min = require('./src/min')
 const minBy = require('./src/minBy')
 const omit = require('./src/omit')
 const omitBy = require('./src/omitBy')
+const orderBy = require('./src/orderBy')
 const pick = require('./src/pick')
 const pickBy = require('./src/pickBy')
 const resolvePromiseCb = require('./src/resolvePromiseCb')
@@ -103,6 +104,7 @@ module.exports = {
   minBy,
   omit,
   omitBy,
+  orderBy,
   pick,
   pickBy,
   resolvePromiseCb,
