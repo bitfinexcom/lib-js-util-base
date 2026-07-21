@@ -41,6 +41,7 @@ export function min (array: Array<any>): any
 export function minBy<T> (collection: Array<T>, iteratee: Function | string): T | undefined
 export function omit (obj: Object, keys: Array<string | Array<string | number>>): Object
 export function omitBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
+export function orderBy (collection: Array<T> | Iterable<T>, iteratees: Array<string | Function>, orders: Array<'asc' | 'desc'>): Array<T>
 export function pick (obj: Object, keys: Array<string>): Object
 export function pickBy (obj: Object, predicate: (val: any, key: string) => boolean): Object
 export function resolvePromiseCb<T> (err: any, res: T, cb: (err: any, res: T) => void): Promise<T>|void
