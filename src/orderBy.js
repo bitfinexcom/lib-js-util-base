@@ -25,8 +25,8 @@ const getValue = (obj, path) => {
  * 'desc' for descending or 'asc' for ascending sort order of
  * corresponding values
  * @param {Array<T> | Iterable<T>} collection The collection to iterate over
- * @param {Array<string | Function>} iteratees The iteratees to sort by
- * @param {Array<'asc' | 'desc'>} orders The sort orders of `iteratees`
+ * @param {Array<string | number | Function>} iteratees The iteratees to sort by
+ * @param {Array<'asc' | 'desc'>} [orders] The sort orders of `iteratees`
  * @returns {Array<T>} Returns the new sorted array
  */
 module.exports = (collection, iteratees = [], orders = []) => {
