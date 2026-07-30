@@ -316,15 +316,11 @@ describe('orderBy', () => {
       { name: undefined },
       { name: null },
       null,
+      undefined,
       { name: null },
       { name: undefined },
       { name: null },
-      null,
-      /**
-       * Array.prototype.sort() behaviour: all undefined elements
-       * are sorted to the end of the array, with no call to compareFn
-       */
-      undefined
+      null
     ])
   })
 

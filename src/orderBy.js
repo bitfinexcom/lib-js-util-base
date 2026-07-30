@@ -34,17 +34,49 @@ module.exports = (collection, iteratees = [], orders = []) => {
   // If iterable object is required, just create it after ordering, not here
   const copiedColl = [...collection]
 
-  return copiedColl.sort((a, b) => {
-    for (const [i, iteratee] of iteratees.entries()) {
-      const direction = orders[i] === 'desc' ? -1 : 1
-      const isIterateeFn = typeof iteratee === 'function'
+  if (
+    copiedColl.length <= 1 ||
+    iteratees.length === 0
+  ) {
+    return copiedColl
+  }
 
-      const valA = isIterateeFn
-        ? iteratee(a)
-        : getValue(a, iteratee)
-      const valB = isIterateeFn
-        ? iteratee(b)
-        : getValue(b, iteratee)
+  // Compile getters once
+  const getters = new Array(iteratees.length)
+  const directions = new Int8Array(iteratees.length)
+
+  for (let i = 0; i < iteratees.length; i++) {
+    const iteratee = iteratees[i]
+    directions[i] = orders[i] === 'desc' ? -1 : 1
+    const isIterateeFn = typeof iteratee === 'function'
+
+    getters[i] = isIterateeFn
+      ? iteratee
+      : (obj) => getValue(obj, iteratee)
+  }
+
+  // Decorate
+  const mapped = new Array(copiedColl.length)
+
+  for (let i = 0; i < copiedColl.length; i++) {
+    const value = copiedColl[i]
+    const criteria = new Array(getters.length)
+
+    for (let j = 0; j < getters.length; j++) {
+      criteria[j] = getters[j](value)
+    }
+
+    mapped[i] = {
+      value,
+      index: i,
+      criteria
+    }
+  }
+
+  mapped.sort((a, b) => {
+    for (let i = 0; i < a.criteria.length; i++) {
+      const valA = a.criteria[i]
+      const valB = b.criteria[i]
 
       if (valA === valB) {
         continue
@@ -64,13 +96,20 @@ module.exports = (collection, iteratees = [], orders = []) => {
       }
 
       if (valA > valB) {
-        return direction
+        return directions[i]
       }
       if (valA < valB) {
-        return -direction
+        return -directions[i]
       }
     }
 
     return 0
   })
+
+  // Undecorate
+  for (let i = 0; i < mapped.length; i++) {
+    copiedColl[i] = mapped[i].value
+  }
+
+  return copiedColl
 }
