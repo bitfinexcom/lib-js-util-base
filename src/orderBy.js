@@ -68,7 +68,6 @@ module.exports = (collection, iteratees = [], orders = []) => {
 
     mapped[i] = {
       value,
-      index: i,
       criteria
     }
   }
