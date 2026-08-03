@@ -29,7 +29,7 @@ const getValue = (obj, path) => {
  * @param {Array<'asc' | 'desc'>} [orders] The sort orders of `iteratees`
  * @returns {Array<T>} Returns the new sorted array
  */
-module.exports = (collection, iteratees = [], orders = []) => {
+const orderBy = (collection, iteratees = [], orders = []) => {
   // It's able to consider iterable objects as well
   // If iterable object is required, just create it after ordering, not here
   const copiedColl = [...collection]
@@ -112,3 +112,5 @@ module.exports = (collection, iteratees = [], orders = []) => {
 
   return copiedColl
 }
+
+module.exports = orderBy
