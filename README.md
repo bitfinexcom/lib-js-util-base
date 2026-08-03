@@ -43,6 +43,7 @@ Currently supported utils:
 - `minBy` - gets the minimum value from a collection by iteratee
 - `omit` - provides new object that omits only specific fields of source object (supports nested paths)
 - `omitBy` -  provides new object that omits only specific fields of source object depending on predicate function filter
+- `orderBy` - creates an array of elements, sorted in ascending or descending order by the results of running each element in a collection through each iteratee. Allows specifying the sort orders of the iteratees to sort by. If `orders` is unspecified, all values are sorted in ascending order. Otherwise, specify an order of 'desc' for descending or 'asc' for ascending sort order of corresponding values
 - `pick` - provides new object that picks only specific fields of source object
 - `pickBy` -  provides new object that picks only specific fields of source object depending on predicate function filter
 - `resolvePromiseCb` -  helper to add callback support to async functions
